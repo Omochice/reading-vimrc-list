@@ -35,6 +35,7 @@ Find inspiration for your own Vim setup.</p>
       <p role="alert">{error}</p>
     {/if}
   </div>
+  <p class="helper">Accepted formats: owner/repo  ·  https://github.com/owner/repo</p>
 </div>
 
 <style>
@@ -128,5 +129,13 @@ Find inspiration for your own Vim setup.</p>
     text-align: center;
     margin: 0;
     white-space: pre-line;
+  }
+
+  .helper {
+    font-family: var(--font-mono, monospace);
+    font-size: 12px;
+    color: var(--foreground-muted, #9ca3af);
+    text-align: center;
+    margin: 0;
   }
 </style>
