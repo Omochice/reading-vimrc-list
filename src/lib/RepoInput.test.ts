@@ -27,6 +27,30 @@ describe("RepoInput", () => {
     });
   });
 
+  test("renders a placeholder with input format examples", () => {
+    render(RepoInput, { props: { onSubmit: () => {} } });
+    const input = screen.getByRole("textbox") as HTMLInputElement;
+    expect(input.placeholder).toBe(
+      "owner/repo or https://github.com/owner/repo",
+    );
+  });
+
+  test("calls onSubmit with owner and repo for owner/repo shorthand", async () => {
+    const onSubmit = vi.fn();
+    render(RepoInput, { props: { onSubmit } });
+
+    const input = screen.getByRole("textbox");
+    await fireEvent.input(input, {
+      target: { value: "vim-jp/reading-vimrc" },
+    });
+    await fireEvent.click(screen.getByRole("button", { name: /submit/i }));
+
+    expect(onSubmit).toHaveBeenCalledWith({
+      owner: "vim-jp",
+      repo: "reading-vimrc",
+    });
+  });
+
   test("shows error message and does not call onSubmit for an invalid URL", async () => {
     const onSubmit = vi.fn();
     render(RepoInput, { props: { onSubmit } });

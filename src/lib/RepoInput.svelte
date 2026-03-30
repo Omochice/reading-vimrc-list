@@ -22,7 +22,7 @@
 </script>
 
 <form onsubmit={handleSubmit}>
-  <input type="text" bind:value={url} />
+  <input type="text" bind:value={url} placeholder="owner/repo or https://github.com/owner/repo" />
   <button type="submit">Submit</button>
   {#if error}
     <p role="alert">{error}</p>
