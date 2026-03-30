@@ -55,3 +55,55 @@ describe("App", () => {
     expect(screen.queryByRole("textbox")).toBeNull();
   });
 });
+
+describe("integration smoke tests", () => {
+  afterEach(() => {
+    cleanup();
+    vi.restoreAllMocks();
+  });
+
+  it("input screen renders NavBar, heading, form card, and footer", () => {
+    render(App);
+    expect(screen.getAllByText("!reading_vimrc").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Listing App/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByLabelText("Repository")).toBeTruthy();
+    expect(screen.getByText(/Accepted formats/)).toBeTruthy();
+    expect(screen.getByText(/A tool for exploring/)).toBeTruthy();
+  });
+
+  it("tree screen renders repo info and tree card", async () => {
+    mockFetchDefaultBranch.mockResolvedValue("main");
+    mockFetchTree.mockResolvedValue([
+      { path: "README.md", type: "blob" },
+    ]);
+
+    render(App);
+    const input = screen.getByRole("textbox");
+    await fireEvent.input(input, { target: { value: "vim/vim" } });
+    await fireEvent.submit(input.closest("form")!);
+
+    await waitFor(() => {
+      expect(screen.getByText("Select files")).toBeTruthy();
+    });
+    expect(screen.getByText(/main/)).toBeTruthy();
+    expect(screen.getByText("README.md")).toBeTruthy();
+    expect(screen.getByText(/0 files selected/)).toBeTruthy();
+  });
+
+  it("error screen renders error card with actions", async () => {
+    mockFetchDefaultBranch.mockRejectedValue(new Error("Not Found"));
+
+    render(App);
+    const input = screen.getByRole("textbox");
+    await fireEvent.input(input, { target: { value: "vim/vim" } });
+    await fireEvent.submit(input.closest("form")!);
+
+    await waitFor(() => {
+      expect(screen.getByText("Repository Not Found")).toBeTruthy();
+    });
+    expect(screen.getByText(/couldn't fetch/i)).toBeTruthy();
+    expect(screen.getByRole("button", { name: "Go Back" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "Try Again" })).toBeTruthy();
+    expect(screen.getByText("Possible reasons")).toBeTruthy();
+  });
+});
