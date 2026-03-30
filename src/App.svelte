@@ -1,4 +1,5 @@
 <script lang="ts">
+  import NavBar from "./lib/NavBar.svelte";
   import RepoInput from "./lib/RepoInput.svelte";
   import FileTreeView from "./lib/FileTreeView.svelte";
 
@@ -13,8 +14,19 @@
   }
 </script>
 
-{#if current.screen === "input"}
-  <RepoInput onSubmit={handleSubmit} />
-{:else}
-  <FileTreeView owner={current.owner} repo={current.repo} />
-{/if}
+<NavBar />
+<main>
+  {#if current.screen === "input"}
+    <RepoInput onSubmit={handleSubmit} />
+  {:else}
+    <FileTreeView owner={current.owner} repo={current.repo} />
+  {/if}
+</main>
+
+<style>
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+</style>

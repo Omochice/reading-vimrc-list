@@ -18,6 +18,11 @@ describe("App", () => {
     vi.restoreAllMocks();
   });
 
+  it("renders NavBar on initial screen", () => {
+    render(App);
+    expect(screen.getByText("!reading_vimrc")).toBeTruthy();
+  });
+
   it("shows RepoInput on initial render", () => {
     render(App);
 
