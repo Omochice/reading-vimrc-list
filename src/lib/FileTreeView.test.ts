@@ -165,6 +165,30 @@ describe("FileTreeView", () => {
     });
   });
 
+  it("shows Back button in error header", async () => {
+    mockFetchDefaultBranch.mockRejectedValue(new Error("Not Found"));
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo", onBack: () => {} },
+    });
+
+    await waitFor(() => {
+      expect(screen.getByRole("button", { name: /Back/ })).toBeTruthy();
+    });
+  });
+
+  it("shows repo name in error header", async () => {
+    mockFetchDefaultBranch.mockRejectedValue(new Error("Not Found"));
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText("test-owner / test-repo")).toBeTruthy();
+    });
+  });
+
   it("toggles file selection when checkbox is clicked", async () => {
     setupSuccessfulFetch();
 
