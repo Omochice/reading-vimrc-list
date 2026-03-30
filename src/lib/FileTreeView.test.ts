@@ -173,7 +173,8 @@ describe("FileTreeView", () => {
     });
 
     await waitFor(() => {
-      expect(screen.getByRole("button", { name: /Back/ })).toBeTruthy();
+      const backButtons = screen.getAllByRole("button", { name: /Back/ });
+      expect(backButtons.length).toBeGreaterThanOrEqual(1);
     });
   });
 
