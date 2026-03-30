@@ -12,8 +12,10 @@ describe("NavBar", () => {
   });
 
   it("renders Listing App text", () => {
-    render(NavBar);
-    expect(screen.getByText(/Listing App/)).toBeTruthy();
+    const { container } = render(NavBar);
+    const match = container.querySelector(".sans");
+    expect(match).toBeTruthy();
+    expect(match?.textContent).toMatch(/Listing App/);
   });
 
   it("renders as a header element", () => {
