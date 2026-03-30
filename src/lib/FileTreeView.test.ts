@@ -276,6 +276,26 @@ describe("FileTreeView", () => {
     });
   });
 
+  it("shows correct selected count after selecting a file", async () => {
+    setupSuccessfulFetch();
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText("README.md")).toBeTruthy();
+    });
+
+    const readmeCheckbox = screen.getByText("README.md")
+      .closest("label")!
+      .querySelector("input") as HTMLInputElement;
+
+    await fireEvent.click(readmeCheckbox);
+
+    expect(screen.getByText(/1 files selected/)).toBeTruthy();
+  });
+
   it("disables copy button when no files are selected", async () => {
     setupSuccessfulFetch();
 
