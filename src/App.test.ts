@@ -25,6 +25,13 @@ describe("App", () => {
     expect(screen.getByRole("button", { name: /submit/i })).toBeTruthy();
   });
 
+  it("renders within #app container with expected layout", () => {
+    const { container } = render(App);
+
+    expect(container.querySelector("form")).toBeTruthy();
+    expect(container.innerHTML).not.toBe("");
+  });
+
   it("transitions to FileTreeView after valid URL submission", async () => {
     mockFetchDefaultBranch.mockReturnValue(new Promise(() => {}));
 

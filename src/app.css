@@ -1,48 +1,68 @@
 :root {
-  --text: #374151;
-  --text-h: #111827;
-  --bg: #fff;
-  --border: #d1d5db;
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
-  --error: #dc2626;
+  --foreground-primary: #1A1A1A;
+  --foreground-secondary: #6B7280;
+  --foreground-muted: #9CA3AF;
+  --foreground-inverse: #FFFFFF;
+  --surface-primary: #FAFAFA;
+  --surface-card: #FFFFFF;
+  --surface-input: #F5F5F5;
+  --surface-secondary: #FFFFFF;
+  --accent-primary: #6366F1;
+  --accent-hover: #4F46E5;
+  --accent-light: #EEF2FF;
+  --checked-bg: #6366F1;
+  --border: #E5E7EB;
+  --error: #EF4444;
+  --error-light: #FEF2F2;
   --success: #16a34a;
-  --muted: #6b7280;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --font-mono: "Geist Mono Variable", ui-monospace, Consolas, monospace;
+  --font-sans: "Geist Variable", system-ui, sans-serif;
+  --font-body: "Inter Variable", system-ui, sans-serif;
 
-  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 15px/1.5 var(--sans);
+  font: 15px/1.5 var(--font-body);
   color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
+  color: var(--foreground-primary);
+  background: var(--surface-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #d1d5db;
-    --text-h: #f3f4f6;
-    --bg: #111827;
+    --foreground-primary: #d1d5db;
+    --foreground-secondary: #9CA3AF;
+    --foreground-muted: #6b7280;
+    --foreground-inverse: #111827;
+    --surface-primary: #111827;
+    --surface-card: #1F2937;
+    --surface-input: #1F2937;
+    --surface-secondary: #1F2937;
+    --accent-primary: #818CF8;
+    --accent-hover: #A5B4FC;
+    --accent-light: #1E1B4B;
+    --checked-bg: #818CF8;
     --border: #374151;
-    --accent: #60a5fa;
-    --accent-hover: #93bbfd;
     --error: #f87171;
+    --error-light: #7F1D1D;
     --success: #4ade80;
-    --muted: #9ca3af;
   }
 }
 
 body {
   margin: 0;
   padding: 0;
+  background: var(--surface-primary);
+  color: var(--foreground-primary);
+  font-family: var(--font-body);
 }
 
 #app {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 32px 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 form {
@@ -55,26 +75,26 @@ form input[type="text"] {
   flex: 1;
   padding: 8px 12px;
   font-size: 15px;
-  font-family: var(--sans);
+  font-family: var(--font-body);
   border: 1px solid var(--border);
   border-radius: 6px;
-  background: var(--bg);
-  color: var(--text-h);
+  background: var(--surface-primary);
+  color: var(--foreground-primary);
   outline: none;
 }
 
 form input[type="text"]:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
 }
 
 button {
   padding: 8px 16px;
   font-size: 15px;
-  font-family: var(--sans);
+  font-family: var(--font-body);
   border: 1px solid var(--border);
   border-radius: 6px;
-  background: var(--accent);
+  background: var(--accent-primary);
   color: #fff;
   cursor: pointer;
 }
@@ -99,9 +119,9 @@ label {
   align-items: center;
   gap: 4px;
   cursor: pointer;
-  font-family: var(--mono);
+  font-family: var(--font-mono);
   font-size: 14px;
-  color: var(--text-h);
+  color: var(--foreground-primary);
 }
 
 input[type="checkbox"] {
@@ -118,14 +138,14 @@ button[aria-label="toggle"] {
   width: 20px;
   height: 20px;
   font-size: 12px;
-  color: var(--muted);
+  color: var(--foreground-muted);
   background: none;
   border: none;
   padding: 0;
 }
 
 button[aria-label="toggle"]:hover {
-  color: var(--text-h);
+  color: var(--foreground-primary);
 }
 
 [role="status"] {
