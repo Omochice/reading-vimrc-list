@@ -86,4 +86,12 @@ describe("RepoInput", () => {
     );
     expect(onSubmit).not.toHaveBeenCalled();
   });
+
+  test("applies error styling when validation fails", async () => {
+    render(RepoInput, { props: { onSubmit: vi.fn() } });
+    const input = screen.getByRole("textbox");
+    await fireEvent.input(input, { target: { value: "invalid" } });
+    await fireEvent.submit(input.closest("form")!);
+    expect(input.getAttribute("aria-invalid")).toBe("true");
+  });
 });

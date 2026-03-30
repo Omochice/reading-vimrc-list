@@ -27,8 +27,8 @@
 Find inspiration for your own Vim setup.</p>
   <div class="card">
     <label for="repo-input">Repository</label>
-    <form onsubmit={handleSubmit}>
-      <input id="repo-input" type="text" bind:value={url} placeholder="owner/repo or https://github.com/owner/repo" />
+    <form class:has-error={error} onsubmit={handleSubmit}>
+      <input id="repo-input" type="text" bind:value={url} placeholder="owner/repo or https://github.com/owner/repo" aria-invalid={error ? "true" : undefined} />
       <button type="submit">Submit</button>
     </form>
     {#if error}
@@ -113,6 +113,19 @@ Find inspiration for your own Vim setup.</p>
     color: var(--foreground-inverse, #fff);
     cursor: pointer;
     white-space: nowrap;
+  }
+
+  form input[aria-invalid="true"] {
+    background: var(--error-light, #fef2f2);
+    border-color: var(--error, #ef4444);
+  }
+
+  form.has-error {
+    flex-direction: column;
+  }
+
+  form.has-error button {
+    width: 100%;
   }
 
   .card [role="alert"] {
