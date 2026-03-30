@@ -51,6 +51,16 @@ describe("RepoInput", () => {
     });
   });
 
+  test("renders the app heading with reading_vimrc text", () => {
+    render(RepoInput, { props: { onSubmit: () => {} } });
+    expect(screen.getByText("!reading_vimrc")).toBeDefined();
+  });
+
+  test("renders the subtitle", () => {
+    render(RepoInput, { props: { onSubmit: () => {} } });
+    expect(screen.getByText(/Explore and discover/)).toBeDefined();
+  });
+
   test("shows error message and does not call onSubmit for an invalid URL", async () => {
     const onSubmit = vi.fn();
     render(RepoInput, { props: { onSubmit } });

@@ -20,7 +20,7 @@ describe("App", () => {
 
   it("renders NavBar on initial screen", () => {
     render(App);
-    expect(screen.getByText("!reading_vimrc")).toBeTruthy();
+    expect(screen.getAllByText("!reading_vimrc").length).toBeGreaterThanOrEqual(1);
   });
 
   it("shows RepoInput on initial render", () => {
