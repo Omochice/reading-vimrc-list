@@ -91,6 +91,32 @@ describe("TreeNode", () => {
     expect(screen.getByRole("button", { name: /toggle/i }).textContent).toBe("▶");
   });
 
+  it("renders file icon for file nodes", () => {
+    const { container } = render(TreeNode, {
+      props: {
+        node: fileNode,
+        selectedPaths: new Set<string>(),
+        onToggle: vi.fn(),
+        onDirectoryToggle: vi.fn(),
+      },
+    });
+
+    expect(container.querySelector("svg")).toBeTruthy();
+  });
+
+  it("renders folder icon for directory nodes", () => {
+    const { container } = render(TreeNode, {
+      props: {
+        node: dirNode,
+        selectedPaths: new Set<string>(),
+        onToggle: vi.fn(),
+        onDirectoryToggle: vi.fn(),
+      },
+    });
+
+    expect(container.querySelector("svg")).toBeTruthy();
+  });
+
   it("renders file checkbox as checked when path is in selectedPaths", () => {
     render(TreeNode, {
       props: {

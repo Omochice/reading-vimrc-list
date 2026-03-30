@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { TreeNode } from "./types";
   import Self from "./TreeNode.svelte";
+  import { Folder, FolderOpen, FileText, Check } from "lucide-svelte";
 
   type Props = {
     node: TreeNode;
@@ -30,32 +31,42 @@
 </script>
 
 {#if node.type === "file"}
-  <div style="padding-left: {depth * 20}px">
-    <label>
-      <input
-        type="checkbox"
-        checked={selectedPaths.has(node.path)}
-        onchange={() => onToggle(node.path)}
-      />
-      {node.name}
+  <div class="tree-row file-row" class:selected={selectedPaths.has(node.path)} style="padding-left: {16 + depth * 24}px">
+    <label class="tree-label">
+      <span class="checkbox-wrapper">
+        <input type="checkbox" class="sr-only" checked={selectedPaths.has(node.path)} onchange={() => onToggle(node.path)} />
+        <span class="checkbox-visual" class:checked={selectedPaths.has(node.path)}>
+          {#if selectedPaths.has(node.path)}
+            <Check size={12} color="var(--foreground-inverse, #fff)" />
+          {/if}
+        </span>
+      </span>
+      <FileText size={16} color="var(--foreground-muted, #9ca3af)" />
+      <span class="node-name">{node.name}</span>
     </label>
   </div>
 {:else}
-  <div style="padding-left: {depth * 20}px">
-    <button
-      aria-label="toggle"
-      onclick={() => { expanded = !expanded; }}
-    >
+  <div class="tree-row dir-row" style="padding-left: {16 + depth * 24}px">
+    <button aria-label="toggle" class="toggle-btn" onclick={() => { expanded = !expanded; }}>
       {expanded ? "▼" : "▶"}
     </button>
-    <label>
-      <input
-        type="checkbox"
-        checked={getCheckState(node) === "checked"}
-        indeterminate={getCheckState(node) === "indeterminate"}
-        onchange={(e) => onDirectoryToggle(node, (e.target as HTMLInputElement).checked)}
-      />
-      {node.name}
+    <label class="tree-label">
+      <span class="checkbox-wrapper">
+        <input type="checkbox" class="sr-only" checked={getCheckState(node) === "checked"} indeterminate={getCheckState(node) === "indeterminate"} onchange={(e) => onDirectoryToggle(node, (e.target as HTMLInputElement).checked)} />
+        <span class="checkbox-visual" class:checked={getCheckState(node) === "checked"} class:indeterminate={getCheckState(node) === "indeterminate"}>
+          {#if getCheckState(node) === "checked"}
+            <Check size={12} color="var(--foreground-inverse, #fff)" />
+          {:else if getCheckState(node) === "indeterminate"}
+            <span class="dash"></span>
+          {/if}
+        </span>
+      </span>
+      {#if expanded}
+        <FolderOpen size={18} color="var(--accent-primary, #6366F1)" />
+      {:else}
+        <Folder size={18} color="var(--foreground-muted, #9ca3af)" />
+      {/if}
+      <span class="node-name">{node.name}</span>
     </label>
   </div>
   {#if expanded}
@@ -70,3 +81,86 @@
     {/each}
   {/if}
 {/if}
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .tree-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .dir-row {
+    height: 44px;
+  }
+
+  .file-row {
+    height: 40px;
+  }
+
+  .file-row.selected {
+    background: var(--accent-light);
+  }
+
+  .tree-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--foreground-primary);
+  }
+
+  .checkbox-wrapper {
+    position: relative;
+    display: inline-flex;
+  }
+
+  .checkbox-visual {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--border);
+    background: transparent;
+  }
+
+  .checkbox-visual.checked,
+  .checkbox-visual.indeterminate {
+    background: var(--checked-bg);
+    border-color: var(--checked-bg);
+  }
+
+  .dash {
+    width: 10px;
+    height: 2px;
+    background: var(--foreground-inverse);
+    border-radius: 1px;
+  }
+
+  .toggle-btn {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    color: var(--foreground-secondary);
+  }
+</style>
