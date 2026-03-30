@@ -41,4 +41,22 @@ describe("parseRepoUrl", () => {
   test("returns null for GitHub root URL", () => {
     expect(parseRepoUrl("https://github.com/")).toBeNull();
   });
+
+  test("returns owner and repo for owner/repo shorthand", () => {
+    const result = parseRepoUrl("owner/repo");
+    expect(result).toEqual({ owner: "owner", repo: "repo" });
+  });
+
+  test("returns owner and repo for owner/repo with trailing slash", () => {
+    const result = parseRepoUrl("owner/repo/");
+    expect(result).toEqual({ owner: "owner", repo: "repo" });
+  });
+
+  test("returns null for shorthand with extra segments", () => {
+    expect(parseRepoUrl("owner/repo/extra")).toBeNull();
+  });
+
+  test("returns null for single segment without slash", () => {
+    expect(parseRepoUrl("owner")).toBeNull();
+  });
 });
