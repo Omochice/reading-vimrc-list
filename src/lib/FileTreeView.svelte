@@ -99,6 +99,14 @@
         <button class="btn-outline" onclick={handleRetry}>Try Again</button>
       </div>
     </div>
+    <div class="hints">
+      <span class="hints-title">Possible reasons</span>
+      <ul class="hints-list">
+        <li>The repository may be private or restricted</li>
+        <li>The URL may contain a typo</li>
+        <li>The repository may have been deleted or renamed</li>
+      </ul>
+    </div>
   </div>
 {:else}
   <div class="repo-info">

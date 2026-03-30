@@ -139,6 +139,30 @@ describe("FileTreeView", () => {
     expect(mockFetchDefaultBranch.mock.calls.length).toBe(callsBefore + 1);
   });
 
+  it("shows Possible reasons heading when error occurs", async () => {
+    mockFetchDefaultBranch.mockRejectedValue(new Error("Not Found"));
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText("Possible reasons")).toBeTruthy();
+    });
+  });
+
+  it("shows hint about private repositories", async () => {
+    mockFetchDefaultBranch.mockRejectedValue(new Error("Not Found"));
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText(/private/)).toBeTruthy();
+    });
+  });
+
   it("toggles file selection when checkbox is clicked", async () => {
     setupSuccessfulFetch();
 
