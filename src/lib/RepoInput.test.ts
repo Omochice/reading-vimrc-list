@@ -1,0 +1,45 @@
+import { cleanup, render, screen, fireEvent } from "@testing-library/svelte";
+import { afterEach, describe, expect, test, vi } from "vitest";
+import RepoInput from "./RepoInput.svelte";
+
+describe("RepoInput", () => {
+  afterEach(() => cleanup());
+
+  test("renders a text input and a submit button", () => {
+    render(RepoInput, { props: { onSubmit: () => {} } });
+    expect(screen.getByRole("textbox")).toBeDefined();
+    expect(screen.getByRole("button", { name: /submit/i })).toBeDefined();
+  });
+
+  test("calls onSubmit with owner and repo for a valid URL", async () => {
+    const onSubmit = vi.fn();
+    render(RepoInput, { props: { onSubmit } });
+
+    const input = screen.getByRole("textbox");
+    await fireEvent.input(input, {
+      target: { value: "https://github.com/vim-jp/reading-vimrc" },
+    });
+    await fireEvent.click(screen.getByRole("button", { name: /submit/i }));
+
+    expect(onSubmit).toHaveBeenCalledWith({
+      owner: "vim-jp",
+      repo: "reading-vimrc",
+    });
+  });
+
+  test("shows error message and does not call onSubmit for an invalid URL", async () => {
+    const onSubmit = vi.fn();
+    render(RepoInput, { props: { onSubmit } });
+
+    const input = screen.getByRole("textbox");
+    await fireEvent.input(input, {
+      target: { value: "not-a-valid-url" },
+    });
+    await fireEvent.click(screen.getByRole("button", { name: /submit/i }));
+
+    expect(screen.getByRole("alert").textContent).toBe(
+      "Invalid GitHub repository URL",
+    );
+    expect(onSubmit).not.toHaveBeenCalled();
+  });
+});
