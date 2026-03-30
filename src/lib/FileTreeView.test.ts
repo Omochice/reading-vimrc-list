@@ -91,6 +91,54 @@ describe("FileTreeView", () => {
     });
   });
 
+  it("renders Go Back button on error", async () => {
+    mockFetchDefaultBranch.mockRejectedValue(new Error("Not Found"));
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo", onBack: () => {} },
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole("button", { name: "Go Back" }),
+      ).toBeTruthy();
+    });
+  });
+
+  it("renders Try Again button on error", async () => {
+    mockFetchDefaultBranch.mockRejectedValue(new Error("Not Found"));
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole("button", { name: "Try Again" }),
+      ).toBeTruthy();
+    });
+  });
+
+  it("Try Again retries the fetch", async () => {
+    mockFetchDefaultBranch.mockRejectedValue(new Error("Not Found"));
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole("button", { name: "Try Again" }),
+      ).toBeTruthy();
+    });
+
+    const callsBefore = mockFetchDefaultBranch.mock.calls.length;
+    const retryButton = screen.getByRole("button", { name: "Try Again" });
+    await fireEvent.click(retryButton);
+
+    expect(mockFetchDefaultBranch.mock.calls.length).toBe(callsBefore + 1);
+  });
+
   it("toggles file selection when checkbox is clicked", async () => {
     setupSuccessfulFetch();
 

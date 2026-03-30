@@ -20,7 +20,7 @@
   {#if current.screen === "input"}
     <RepoInput onSubmit={handleSubmit} />
   {:else}
-    <FileTreeView owner={current.owner} repo={current.repo} />
+    <FileTreeView owner={current.owner} repo={current.repo} onBack={() => { current = { screen: "input" }; }} />
   {/if}
 </main>
 <Footer />

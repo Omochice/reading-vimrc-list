@@ -9,9 +9,10 @@
   type Props = {
     owner: string;
     repo: string;
+    onBack?: () => void;
   };
 
-  let { owner, repo }: Props = $props();
+  let { owner, repo, onBack }: Props = $props();
 
   let tree = $state<TreeNode[]>([]);
   let branch = $state("");
@@ -55,6 +56,12 @@
     setTimeout(() => { toastVisible = false; }, 3000);
   }
 
+  function handleRetry() {
+    error = null;
+    loading = true;
+    load();
+  }
+
   async function load() {
     try {
       branch = await fetchDefaultBranch(owner, repo);
@@ -85,6 +92,12 @@
         <span>{error}</span>
       </span>
       <div class="error-divider"></div>
+      <div class="error-actions">
+        {#if onBack}
+          <button class="btn-primary" onclick={onBack}>Go Back</button>
+        {/if}
+        <button class="btn-outline" onclick={handleRetry}>Try Again</button>
+      </div>
     </div>
   </div>
 {:else}
@@ -226,5 +239,35 @@
     width: 100%;
     height: 1px;
     background: var(--border);
+  }
+
+  .error-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn-primary {
+    background: var(--accent-primary);
+    color: var(--foreground-inverse);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 10px 20px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--foreground-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 20px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
   }
 </style>
