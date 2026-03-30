@@ -10,20 +10,24 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "test": "vitest"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.9",
     "@sveltejs/mcp": "^0.1.22",
     "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "@testing-library/svelte": "^5.3.1",
     "@tsconfig/svelte": "^5.0.8",
     "@types/node": "^24.12.0",
+    "jsdom": "^29.0.1",
     "npm-run-all2": "^8.0.4",
     "sort-package-json": "^3.6.1",
     "svelte": "^5.53.12",
     "svelte-check": "^4.4.5",
     "typescript": "~5.9.3",
-    "vite": "^8.0.1"
+    "vite": "^8.0.1",
+    "vitest": "^4.1.2"
   },
   "packageManager": "pnpm@10.33.0",
   "devEngines": {
