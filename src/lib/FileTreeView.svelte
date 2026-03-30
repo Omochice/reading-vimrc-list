@@ -4,6 +4,7 @@
   import { fetchDefaultBranch, fetchTree } from "./fetchTree";
   import { buildTree } from "./buildTree";
   import { buildCommand } from "./buildCommand";
+  import { FolderGit2, GitBranch } from "lucide-svelte";
 
   type Props = {
     owner: string;
@@ -72,8 +73,29 @@
 {#if loading}
   <p>Loading...</p>
 {:else if error}
-  <p role="alert">{error}</p>
+  <div class="error-body" role="alert">
+    <div class="error-card">
+      <div class="error-icon-circle">
+        <span class="error-icon-text">!</span>
+      </div>
+      <h2 class="error-title">Repository Not Found</h2>
+      <p class="error-desc">We couldn't fetch the repository. It may not exist or could be private.</p>
+      <span class="status-badge">
+        <span class="status-dot"></span>
+        <span>{error}</span>
+      </span>
+      <div class="error-divider"></div>
+    </div>
+  </div>
 {:else}
+  <div class="repo-info">
+    <FolderGit2 size={20} color="var(--accent-primary, #6366F1)" />
+    <span class="repo-name">{owner} / {repo}</span>
+    <span class="branch-badge">
+      <GitBranch size={14} color="var(--accent-primary, #6366F1)" />
+      <span>{branch}</span>
+    </span>
+  </div>
   <div>
     {#each tree as node}
       <TreeNodeComponent
@@ -94,3 +116,115 @@
     <p role="status">Copied to clipboard</p>
   {/if}
 {/if}
+
+<style>
+  .repo-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .repo-name {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--foreground-primary);
+  }
+
+  .branch-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    border-radius: 9999px;
+    padding: 4px 10px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent-primary);
+  }
+
+  .error-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0 120px;
+    gap: 20px;
+  }
+
+  .error-card {
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .error-icon-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 9999px;
+    background: var(--error-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .error-icon-text {
+    font-family: var(--font-sans);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--error);
+  }
+
+  .error-title {
+    font-family: var(--font-sans);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--foreground-primary);
+    margin: 0;
+  }
+
+  .error-desc {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--foreground-secondary);
+    text-align: center;
+    max-width: 400px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--error-light);
+    border-radius: 9999px;
+    padding: 5px 12px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--error);
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: var(--error);
+  }
+
+  .error-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+  }
+</style>

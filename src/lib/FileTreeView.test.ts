@@ -65,6 +65,32 @@ describe("FileTreeView", () => {
     });
   });
 
+  it("shows Repository Not Found title when fetch fails", async () => {
+    mockFetchDefaultBranch.mockRejectedValue(new Error("Not Found"));
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText("Repository Not Found")).toBeTruthy();
+    });
+  });
+
+  it("shows error description when fetch fails", async () => {
+    mockFetchDefaultBranch.mockRejectedValue(new Error("Not Found"));
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(/couldn't fetch the repository/),
+      ).toBeTruthy();
+    });
+  });
+
   it("toggles file selection when checkbox is clicked", async () => {
     setupSuccessfulFetch();
 
@@ -149,6 +175,31 @@ describe("FileTreeView", () => {
 
     const copyButton = screen.getByText("Copy") as HTMLButtonElement;
     expect(copyButton.disabled).toBe(false);
+  });
+
+  it("displays owner and repo name after loading", async () => {
+    setupSuccessfulFetch();
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText(/test-owner/)).toBeTruthy();
+    });
+    expect(screen.getByText(/test-repo/)).toBeTruthy();
+  });
+
+  it("displays branch name in a badge after loading", async () => {
+    setupSuccessfulFetch();
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText("main")).toBeTruthy();
+    });
   });
 
   it("shows indeterminate state on directory when some descendants are selected", async () => {
