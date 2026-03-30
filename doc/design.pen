@@ -3,396 +3,71 @@
   "children": [
     {
       "type": "frame",
-      "id": "lufmQ",
+      "id": "iUhGJ",
       "x": 0,
       "y": 0,
       "name": "Input Screen",
       "width": 1024,
       "height": 768,
-      "fill": "#FFFFFF",
+      "fill": "$surface-primary",
       "layout": "vertical",
-      "padding": [
-        32,
-        16
-      ],
       "children": [
         {
           "type": "frame",
-          "id": "Xi6iG",
-          "name": "Form",
+          "id": "pA5qM",
+          "name": "Nav Bar",
           "width": "fill_container",
+          "height": 56,
+          "fill": "$surface-card",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "$border"
+          },
           "gap": 8,
+          "padding": [
+            0,
+            24
+          ],
+          "alignItems": "center",
           "children": [
             {
-              "type": "frame",
-              "id": "KVV5p",
-              "name": "Text Input",
-              "width": "fill_container",
-              "fill": "#FFFFFF",
-              "cornerRadius": 6,
-              "stroke": {
-                "align": "inside",
-                "thickness": 1,
-                "fill": "#D1D5DB"
-              },
-              "padding": [
-                8,
-                12
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "SKOfQ",
-                  "name": "placeholder1",
-                  "fill": "#9CA3AF",
-                  "content": "owner/repo or https://github.com/owner/repo",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "normal"
-                }
-              ]
+              "type": "icon_font",
+              "id": "wSl77",
+              "name": "navIcon",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "book-open",
+              "iconFontFamily": "lucide",
+              "fill": "$accent-primary"
             },
             {
               "type": "frame",
-              "id": "Nw8WV",
-              "name": "Submit Button",
-              "fill": "#2563EB",
-              "cornerRadius": 6,
-              "padding": [
-                8,
-                16
-              ],
-              "justifyContent": "center",
-              "alignItems": "center",
+              "id": "WTnMa",
+              "name": "navTitle",
+              "alignItems": "end",
               "children": [
                 {
                   "type": "text",
-                  "id": "vqlN2",
-                  "name": "btnLabel1",
-                  "fill": "#FFFFFF",
-                  "content": "Submit",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "normal"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "bGcmB",
-      "x": 1100,
-      "y": 0,
-      "name": "Tree Screen",
-      "width": 1024,
-      "height": 768,
-      "fill": "#FFFFFF",
-      "layout": "vertical",
-      "padding": [
-        32,
-        16
-      ],
-      "children": [
-        {
-          "type": "frame",
-          "id": "w7Rlr",
-          "name": "Tree Container",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 2,
-          "children": [
-            {
-              "type": "frame",
-              "id": "t51jY",
-              "name": "runtime (collapsed dir)",
-              "width": "fill_container",
-              "gap": 4,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "9bnp3",
-                  "name": "t1",
-                  "fill": "#6B7280",
-                  "content": "▶",
-                  "fontFamily": "Inter",
-                  "fontSize": 11,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "p04DB",
-                  "name": "Checkbox Unchecked",
-                  "width": 13,
-                  "height": 13,
-                  "cornerRadius": 2,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1.5,
-                    "fill": "#9CA3AF"
-                  }
+                  "id": "jDPWT",
+                  "name": "t1a",
+                  "fill": "$foreground-primary",
+                  "content": "!reading_vimrc",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 16,
+                  "fontWeight": "600"
                 },
                 {
                   "type": "text",
-                  "id": "pSQLs",
-                  "name": "lbl1",
-                  "fill": "#111827",
-                  "content": "runtime",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "NosAS",
-              "name": "src (expanded dir, indeterminate)",
-              "width": "fill_container",
-              "gap": 4,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "ZZBu2",
-                  "name": "t2",
-                  "fill": "#374151",
-                  "content": "▼",
-                  "fontFamily": "Inter",
-                  "fontSize": 11,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "vsm6N",
-                  "name": "Checkbox Indeterminate",
-                  "width": 13,
-                  "height": 13,
-                  "fill": "#4A7AE5",
-                  "cornerRadius": 2,
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "id": "oIjrf",
-                      "name": "dash2",
-                      "fill": "#FFFFFF",
-                      "width": 7,
-                      "height": 2
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "7F5l7",
-                  "name": "lbl2",
-                  "fill": "#111827",
-                  "content": "src",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "2TXuH",
-              "name": "buffer.c (checked)",
-              "width": "fill_container",
-              "gap": 4,
-              "padding": [
-                0,
-                0,
-                0,
-                28
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "HAquZ",
-                  "name": "Checkbox Checked",
-                  "width": 13,
-                  "height": 13,
-                  "fill": "#4A7AE5",
-                  "cornerRadius": 2,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "pYN1n",
-                      "name": "fchk1",
-                      "fill": "#FFFFFF",
-                      "content": "✓",
-                      "fontFamily": "Inter",
-                      "fontSize": 9,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "wfvOv",
-                  "name": "flbl1",
-                  "fill": "#111827",
-                  "content": "buffer.c",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "zbaDB",
-              "name": "eval.c (unchecked)",
-              "width": "fill_container",
-              "gap": 4,
-              "padding": [
-                0,
-                0,
-                0,
-                28
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "xxVMb",
-                  "name": "Checkbox Unchecked",
-                  "width": 13,
-                  "height": 13,
-                  "cornerRadius": 2,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1.5,
-                    "fill": "#9CA3AF"
-                  }
-                },
-                {
-                  "type": "text",
-                  "id": "72GEU",
-                  "name": "flbl2",
-                  "fill": "#111827",
-                  "content": "eval.c",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "UTUL3",
-              "name": "main.c (unchecked)",
-              "width": "fill_container",
-              "gap": 4,
-              "padding": [
-                0,
-                0,
-                0,
-                28
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "3ZXkT",
-                  "name": "Checkbox Unchecked",
-                  "width": 13,
-                  "height": 13,
-                  "cornerRadius": 2,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1.5,
-                    "fill": "#9CA3AF"
-                  }
-                },
-                {
-                  "type": "text",
-                  "id": "AIrFA",
-                  "name": "flbl3",
-                  "fill": "#111827",
-                  "content": "main.c",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "3neqv",
-              "name": "Makefile (checked)",
-              "width": "fill_container",
-              "gap": 4,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "yPHOZ",
-                  "name": "Checkbox Checked",
-                  "width": 13,
-                  "height": 13,
-                  "fill": "#4A7AE5",
-                  "cornerRadius": 2,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "yuD6t",
-                      "name": "fchk4",
-                      "fill": "#FFFFFF",
-                      "content": "✓",
-                      "fontFamily": "Inter",
-                      "fontSize": 9,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "LkHSL",
-                  "name": "flbl4",
-                  "fill": "#111827",
-                  "content": "Makefile",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "jvkMq",
-              "name": "README.md (unchecked)",
-              "width": "fill_container",
-              "gap": 4,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "RqlDz",
-                  "name": "Checkbox Unchecked",
-                  "width": 13,
-                  "height": 13,
-                  "cornerRadius": 2,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1.5,
-                    "fill": "#9CA3AF"
-                  }
-                },
-                {
-                  "type": "text",
-                  "id": "GFv0f",
-                  "name": "flbl5",
-                  "fill": "#111827",
-                  "content": "README.md",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
+                  "id": "xNFSD",
+                  "name": "t1b",
+                  "fill": "$foreground-primary",
+                  "content": " Listing App",
+                  "fontFamily": "Geist",
+                  "fontSize": 16,
+                  "fontWeight": "600"
                 }
               ]
             }
@@ -400,25 +75,196 @@
         },
         {
           "type": "frame",
-          "id": "4DtuN",
-          "name": "Copy Button",
-          "fill": "#2563EB",
-          "cornerRadius": 6,
+          "id": "jiQM0",
+          "name": "Main Content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
           "padding": [
-            8,
-            16
+            0,
+            24
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "cHYep",
+              "name": "heading",
+              "justifyContent": "center",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "8uZTs",
+                  "name": "t5a",
+                  "fill": "$foreground-primary",
+                  "content": "!reading_vimrc",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "MukUg",
+                  "name": "t5b",
+                  "fill": "$foreground-primary",
+                  "content": " Listing App",
+                  "fontFamily": "Geist",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "929UO",
+              "name": "subtitle",
+              "fill": "$foreground-secondary",
+              "textGrowth": "fixed-width",
+              "width": 480,
+              "content": "Explore and discover vimrc configurations from any GitHub repository.\nFind inspiration for your own Vim setup.",
+              "lineHeight": 1.5,
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "HEUHB",
+              "name": "Form Card",
+              "width": 480,
+              "fill": "$surface-card",
+              "cornerRadius": "$radius-lg",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#0000000F",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 16
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 28,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ia3gI",
+                  "name": "label",
+                  "fill": "$foreground-primary",
+                  "content": "Repository",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "P8vF6",
+                  "name": "Input Row",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kWmvd",
+                      "name": "Input Field",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$surface-input",
+                      "cornerRadius": "$radius-sm",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$border"
+                      },
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "N6ZSA",
+                          "name": "inputText",
+                          "fill": "$foreground-muted",
+                          "content": "owner/repo or https://github.com/owner/repo",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9QZSv",
+                      "name": "Submit Button",
+                      "height": 44,
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$radius-sm",
+                      "padding": [
+                        0,
+                        24
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JQSBS",
+                          "name": "submitText",
+                          "fill": "$foreground-inverse",
+                          "content": "Submit",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "AQLks",
+              "name": "helperText",
+              "fill": "$foreground-muted",
+              "content": "Accepted formats: owner/repo  ·  https://github.com/owner/repo",
+              "textAlign": "center",
+              "fontFamily": "Geist Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "VZC2N",
+          "name": "Footer",
+          "width": "fill_container",
+          "height": 48,
+          "padding": [
+            0,
+            24
           ],
           "justifyContent": "center",
           "alignItems": "center",
           "children": [
             {
               "type": "text",
-              "id": "6QCDf",
-              "name": "copyLabel",
-              "fill": "#FFFFFF",
-              "content": "Copy",
+              "id": "TmkqG",
+              "name": "footerText",
+              "fill": "$foreground-muted",
+              "content": "reading-vimrc — A tool for exploring Vim configurations",
               "fontFamily": "Inter",
-              "fontSize": 15,
+              "fontSize": 12,
               "fontWeight": "normal"
             }
           ]
@@ -427,90 +273,1003 @@
     },
     {
       "type": "frame",
-      "id": "MRxeW",
-      "x": 0,
-      "y": 848,
-      "name": "Input Screen - Validation Error",
+      "id": "zZNws",
+      "x": 1124,
+      "y": 0,
+      "name": "Tree Screen",
+      "clip": true,
       "width": 1024,
       "height": 768,
-      "fill": "#FFFFFF",
+      "fill": "$surface-primary",
+      "cornerRadius": "$radius-lg",
       "layout": "vertical",
-      "padding": [
-        32,
-        16
-      ],
       "children": [
         {
           "type": "frame",
-          "id": "uMkQ3",
-          "name": "Form with Error",
+          "id": "VE3QW",
+          "name": "Nav Bar",
           "width": "fill_container",
+          "height": 56,
+          "fill": "$surface-card",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "$border"
+          },
           "gap": 8,
+          "padding": [
+            0,
+            24
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "sxUuf",
+              "name": "navIcon2",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "book-open",
+              "iconFontFamily": "lucide",
+              "fill": "$accent-primary"
+            },
+            {
+              "type": "frame",
+              "id": "zzUbD",
+              "name": "appName",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gGJW2",
+                  "name": "t4a",
+                  "fill": "$foreground-primary",
+                  "content": "!reading_vimrc",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "vbsMX",
+                  "name": "t4b",
+                  "fill": "$foreground-primary",
+                  "content": " Listing App",
+                  "fontFamily": "Geist",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Ytubt",
+              "name": "navSpacer",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "icon_font",
+              "id": "tiNNb",
+              "name": "navIcon",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "github",
+              "iconFontFamily": "lucide",
+              "fill": "$foreground-secondary"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "6jo4Z",
+          "name": "Body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            24,
+            32
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "U3S6w",
+              "name": "Repo Info",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "ihBdv",
+                  "name": "repoIcon",
+                  "width": 20,
+                  "height": 20,
+                  "iconFontName": "folder-git-2",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-primary"
+                },
+                {
+                  "type": "text",
+                  "id": "3OirG",
+                  "name": "repoName",
+                  "fill": "$foreground-primary",
+                  "content": "vim / vim",
+                  "fontFamily": "Geist",
+                  "fontSize": 18,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "8OF74",
+                  "name": "Branch Badge",
+                  "fill": "$accent-light",
+                  "cornerRadius": 9999,
+                  "gap": 6,
+                  "padding": [
+                    4,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "FG3zE",
+                      "name": "branchIcon",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "git-branch",
+                      "iconFontFamily": "lucide",
+                      "fill": "$accent-primary"
+                    },
+                    {
+                      "type": "text",
+                      "id": "HbyNM",
+                      "name": "branchText",
+                      "fill": "$accent-primary",
+                      "content": "master",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "orvof",
+              "name": "File Tree Card",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "$surface-card",
+              "cornerRadius": "$radius-md",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#0000000F",
+                "offset": {
+                  "x": 0,
+                  "y": 2
+                },
+                "blur": 8
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "zQ2iu",
+                  "name": "Card Header",
+                  "width": "fill_container",
+                  "height": 48,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "bottom": 1
+                    },
+                    "fill": "$border"
+                  },
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RsLk5",
+                      "name": "headerLabel",
+                      "fill": "$foreground-primary",
+                      "content": "Select files",
+                      "fontFamily": "Geist",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "X89PP",
+                      "name": "headerSpacer",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "fmNoc",
+                      "name": "headerCount",
+                      "fill": "$foreground-muted",
+                      "content": "7 items",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tjfVu",
+                  "name": "Tree List",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "padding": [
+                    8,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "OGzhE",
+                      "name": "Row - runtime",
+                      "width": "fill_container",
+                      "height": 44,
+                      "gap": 12,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "au8Jl",
+                          "name": "arrow1",
+                          "fill": "$foreground-secondary",
+                          "content": "▶",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "odfmU",
+                          "name": "Checkbox Unchecked",
+                          "width": 18,
+                          "height": 18,
+                          "cornerRadius": 4,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.5,
+                            "fill": "$border"
+                          },
+                          "layout": "none"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "JkakX",
+                          "name": "icon1",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "folder",
+                          "iconFontFamily": "lucide",
+                          "fill": "$foreground-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "SlChy",
+                          "name": "name1",
+                          "fill": "$foreground-primary",
+                          "content": "runtime",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TVFYD",
+                      "name": "Row - src",
+                      "width": "fill_container",
+                      "height": 44,
+                      "gap": 12,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "FT4cj",
+                          "name": "arrow2",
+                          "fill": "$foreground-secondary",
+                          "content": "▼",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "LERj7",
+                          "name": "Checkbox Indeterminate",
+                          "width": 18,
+                          "height": 18,
+                          "fill": "$checked-bg",
+                          "cornerRadius": 4,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "vXH15",
+                              "name": "cb2dash",
+                              "width": 10,
+                              "height": 2,
+                              "fill": "$foreground-inverse",
+                              "cornerRadius": 1
+                            }
+                          ]
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "4zgFp",
+                          "name": "icon2",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "folder-open",
+                          "iconFontFamily": "lucide",
+                          "fill": "$accent-primary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "2hhiu",
+                          "name": "name2",
+                          "fill": "$foreground-primary",
+                          "content": "src",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zocEN",
+                      "name": "Row - buffer.c",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "$accent-light",
+                      "gap": 12,
+                      "padding": [
+                        0,
+                        16,
+                        0,
+                        52
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "MsKgY",
+                          "name": "Checkbox Checked",
+                          "width": 18,
+                          "height": 18,
+                          "fill": "$checked-bg",
+                          "cornerRadius": 4,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "pnPUB",
+                              "name": "cbBufCheck",
+                              "width": 12,
+                              "height": 12,
+                              "iconFontName": "check",
+                              "iconFontFamily": "lucide",
+                              "fill": "$foreground-inverse"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "Ym0Lt",
+                          "name": "iconBuf",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "file-text",
+                          "iconFontFamily": "lucide",
+                          "fill": "$foreground-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "nujSh",
+                          "name": "nameBuf",
+                          "fill": "$foreground-primary",
+                          "content": "buffer.c",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NpSSp",
+                      "name": "Row - eval.c",
+                      "width": "fill_container",
+                      "height": 40,
+                      "gap": 12,
+                      "padding": [
+                        0,
+                        16,
+                        0,
+                        52
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "yDI61",
+                          "name": "Checkbox Unchecked",
+                          "width": 18,
+                          "height": 18,
+                          "cornerRadius": 4,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.5,
+                            "fill": "$border"
+                          },
+                          "layout": "none"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "LVAwF",
+                          "name": "iconEval",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "file-text",
+                          "iconFontFamily": "lucide",
+                          "fill": "$foreground-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "XVNht",
+                          "name": "nameEval",
+                          "fill": "$foreground-primary",
+                          "content": "eval.c",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "4ki0c",
+                      "name": "Row - main.c",
+                      "width": "fill_container",
+                      "height": 40,
+                      "gap": 12,
+                      "padding": [
+                        0,
+                        16,
+                        0,
+                        52
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "BzHvD",
+                          "name": "Checkbox Unchecked",
+                          "width": 18,
+                          "height": 18,
+                          "cornerRadius": 4,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.5,
+                            "fill": "$border"
+                          },
+                          "layout": "none"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "8CKgB",
+                          "name": "iconMain",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "file-text",
+                          "iconFontFamily": "lucide",
+                          "fill": "$foreground-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "9w2YY",
+                          "name": "nameMain",
+                          "fill": "$foreground-primary",
+                          "content": "main.c",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hjpIN",
+                      "name": "Row - Makefile",
+                      "width": "fill_container",
+                      "height": 44,
+                      "gap": 12,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "E3a9d",
+                          "name": "spacerMake",
+                          "width": 10,
+                          "height": 10
+                        },
+                        {
+                          "type": "frame",
+                          "id": "t2zKF",
+                          "name": "Checkbox Checked",
+                          "width": 18,
+                          "height": 18,
+                          "fill": "$checked-bg",
+                          "cornerRadius": 4,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "RihMq",
+                              "name": "cbMakeCheck",
+                              "width": 12,
+                              "height": 12,
+                              "iconFontName": "check",
+                              "iconFontFamily": "lucide",
+                              "fill": "$foreground-inverse"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "fFu2C",
+                          "name": "iconMake",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "file-text",
+                          "iconFontFamily": "lucide",
+                          "fill": "$foreground-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "pd6SO",
+                          "name": "nameMake",
+                          "fill": "$foreground-primary",
+                          "content": "Makefile",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "3QkbE",
+                      "name": "Row - README.md",
+                      "width": "fill_container",
+                      "height": 44,
+                      "gap": 12,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "n8mkZ",
+                          "name": "spacerReadme",
+                          "width": 10,
+                          "height": 10
+                        },
+                        {
+                          "type": "frame",
+                          "id": "inE1Y",
+                          "name": "Checkbox Unchecked",
+                          "width": 18,
+                          "height": 18,
+                          "cornerRadius": 4,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.5,
+                            "fill": "$border"
+                          },
+                          "layout": "none"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "29QqL",
+                          "name": "iconReadme",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "file-text",
+                          "iconFontFamily": "lucide",
+                          "fill": "$foreground-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "pgEqT",
+                          "name": "nameReadme",
+                          "fill": "$foreground-primary",
+                          "content": "README.md",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lAajv",
+                  "name": "Divider",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "$border"
+                },
+                {
+                  "type": "frame",
+                  "id": "6m91S",
+                  "name": "Footer Bar",
+                  "width": "fill_container",
+                  "height": 56,
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lZGCR",
+                      "name": "countText",
+                      "fill": "$foreground-secondary",
+                      "content": "2 files selected",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "P1bbt",
+                      "name": "footerSpacer",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ITxy6",
+                      "name": "Copy Button",
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$radius-sm",
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        20
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "tRs0I",
+                          "name": "copyIcon",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "copy",
+                          "iconFontFamily": "lucide",
+                          "fill": "$foreground-inverse"
+                        },
+                        {
+                          "type": "text",
+                          "id": "nTrG2",
+                          "name": "copyText",
+                          "fill": "$foreground-inverse",
+                          "content": "Copy",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "qho4Q",
+      "x": 0,
+      "y": 868,
+      "name": "Input Screen - Validation Error",
+      "width": 1024,
+      "height": 768,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "LCGW5",
+          "name": "Nav Bar",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "$surface-card",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "$border"
+          },
+          "gap": 8,
+          "padding": [
+            0,
+            24
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "d5J8U",
+              "name": "navIcon",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "book-open",
+              "iconFontFamily": "lucide",
+              "fill": "$accent-primary"
+            },
+            {
+              "type": "frame",
+              "id": "0QMyo",
+              "name": "navTitle",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SZlw7",
+                  "name": "t2a",
+                  "fill": "$foreground-primary",
+                  "content": "!reading_vimrc",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "pw4a1",
+                  "name": "t2b",
+                  "fill": "$foreground-primary",
+                  "content": " Listing App",
+                  "fontFamily": "Geist",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pLdn5",
+          "name": "Hero Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            48,
+            24,
+            32,
+            24
+          ],
           "alignItems": "center",
           "children": [
             {
               "type": "frame",
-              "id": "YWjUV",
-              "name": "Text Input (filled)",
+              "id": "xCyJ0",
+              "name": "heroTitle",
+              "justifyContent": "center",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yFboi",
+                  "name": "t6a",
+                  "fill": "$foreground-primary",
+                  "content": "!reading_vimrc",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "FaE0K",
+                  "name": "t6b",
+                  "fill": "$foreground-primary",
+                  "content": " Listing App",
+                  "fontFamily": "Geist",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "6OtZF",
+              "name": "heroSub",
+              "fill": "$foreground-secondary",
+              "content": "Enter a GitHub repository URL to explore its file tree",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rzZuX",
+          "name": "Form Card",
+          "width": 480,
+          "fill": "$surface-card",
+          "cornerRadius": "$radius-lg",
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#0000000a",
+            "offset": {
+              "x": 0,
+              "y": 1
+            },
+            "blur": 2
+          },
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 32,
+          "children": [
+            {
+              "type": "text",
+              "id": "ePjPz",
+              "name": "inputLabel",
+              "fill": "$foreground-primary",
+              "content": "Repository URL",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "ocnzC",
+              "name": "Input Field Error",
               "width": "fill_container",
-              "fill": "#FFFFFF",
-              "cornerRadius": 6,
+              "height": 44,
+              "fill": "$error-light",
+              "cornerRadius": "$radius-sm",
               "stroke": {
                 "align": "inside",
                 "thickness": 1,
-                "fill": "#D1D5DB"
+                "fill": "$error"
               },
               "padding": [
-                8,
+                0,
                 12
               ],
               "alignItems": "center",
               "children": [
                 {
                   "type": "text",
-                  "id": "7SVXJ",
-                  "name": "txt2",
-                  "fill": "#111827",
+                  "id": "h22D7",
+                  "name": "inputText",
+                  "fill": "$foreground-primary",
                   "content": "invalid-url",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "L5eUV",
-              "name": "Submit Button",
-              "fill": "#2563EB",
-              "cornerRadius": 6,
-              "padding": [
-                8,
-                16
-              ],
-              "justifyContent": "center",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "5xMwi",
-                  "name": "btxt2",
-                  "fill": "#FFFFFF",
-                  "content": "Submit",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 14,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "text",
-              "id": "U5TLz",
-              "name": "Validation Error",
-              "fill": "#DC2626",
+              "id": "w8Cbf",
+              "name": "errorMsg",
+              "fill": "$error",
               "content": "Invalid GitHub repository URL",
               "fontFamily": "Inter",
-              "fontSize": 14,
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "5puOE",
+              "name": "Submit Button",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$accent-primary",
+              "cornerRadius": "$radius-sm",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cztzg",
+                  "name": "submitLabel",
+                  "fill": "$foreground-inverse",
+                  "content": "Submit",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wY3SQ",
+          "name": "Helper Text",
+          "width": 480,
+          "layout": "vertical",
+          "gap": 4,
+          "padding": [
+            16,
+            0
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "BSQby",
+              "name": "helperTitle",
+              "fill": "$foreground-secondary",
+              "content": "Accepted formats:",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "XtCKg",
+              "name": "helperFormats",
+              "fill": "$foreground-muted",
+              "content": "owner/repo  ·  https://github.com/owner/repo",
+              "fontFamily": "Geist Mono",
+              "fontSize": 12,
               "fontWeight": "normal"
             }
           ]
@@ -519,30 +1278,509 @@
     },
     {
       "type": "frame",
-      "id": "Mzfwl",
-      "x": 1100,
-      "y": 848,
+      "id": "r8ytc",
+      "x": 1124,
+      "y": 868,
       "name": "Tree Screen - API Error",
       "width": 1024,
       "height": 768,
-      "fill": "#FFFFFF",
+      "fill": "$surface-primary",
       "layout": "vertical",
-      "padding": [
-        32,
-        16
-      ],
       "children": [
         {
-          "type": "text",
-          "id": "aXJwM",
-          "name": "API Error Message",
-          "fill": "#DC2626",
-          "content": "Failed to fetch repository: 404",
-          "fontFamily": "Inter",
-          "fontSize": 15,
-          "fontWeight": "normal"
+          "type": "frame",
+          "id": "P158n",
+          "name": "Nav Bar",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "$surface-card",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "$border"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "enabled": false,
+            "color": "#0000000a",
+            "offset": {
+              "x": 0,
+              "y": 1
+            },
+            "blur": 2
+          },
+          "gap": 8,
+          "padding": [
+            0,
+            24
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "3X0L8",
+              "name": "navIcon",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "book-open",
+              "iconFontFamily": "lucide",
+              "fill": "$accent-primary"
+            },
+            {
+              "type": "frame",
+              "id": "wXvDL",
+              "name": "navTitle",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "liLMK",
+                  "name": "t3a",
+                  "fill": "$foreground-primary",
+                  "content": "!reading_vimrc",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "poM0y",
+                  "name": "t3b",
+                  "fill": "$foreground-primary",
+                  "content": " Listing App",
+                  "fontFamily": "Geist",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "epDjN",
+          "name": "Body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            0,
+            120
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "qXkYx",
+              "layoutPosition": "absolute",
+              "x": 32,
+              "y": 24,
+              "name": "Repo Header",
+              "width": "fill_container(784)",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "9kjxe",
+                  "name": "Back Button",
+                  "cornerRadius": "$radius-sm",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$border"
+                  },
+                  "gap": 6,
+                  "padding": [
+                    6,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gSNEQ",
+                      "name": "backArrow",
+                      "fill": "$foreground-secondary",
+                      "content": "←",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "7lTDY",
+                      "name": "backLabel",
+                      "fill": "$foreground-secondary",
+                      "content": "Back",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "XL6ou",
+                  "name": "repoName",
+                  "fill": "$foreground-primary",
+                  "content": "owner / repo",
+                  "fontFamily": "Geist",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "HzdJB",
+              "name": "Error Card",
+              "width": "fill_container",
+              "fill": "$surface-secondary",
+              "cornerRadius": "$radius-lg",
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$border"
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#0000000D",
+                "offset": {
+                  "x": 0,
+                  "y": 2
+                },
+                "blur": 8
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": [
+                40,
+                32
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "LfpAx",
+                  "name": "Error Icon",
+                  "width": 56,
+                  "height": 56,
+                  "fill": "$error-light",
+                  "cornerRadius": 9999,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qUhuO",
+                      "name": "iconText",
+                      "fill": "$error",
+                      "content": "!",
+                      "fontFamily": "Geist",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "IyVZg",
+                  "name": "Error Title",
+                  "fill": "$foreground-primary",
+                  "content": "Repository Not Found",
+                  "fontFamily": "Geist",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "tjCmZ",
+                  "name": "Error Desc",
+                  "fill": "$foreground-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 400,
+                  "content": "We couldn't fetch the repository. It may not exist or could be private.",
+                  "lineHeight": 1.5,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "EDG8M",
+                  "name": "Status Badge",
+                  "fill": "$error-light",
+                  "cornerRadius": 9999,
+                  "gap": 6,
+                  "padding": [
+                    5,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "5060C",
+                      "name": "badgeDot",
+                      "fill": "$error",
+                      "width": 6,
+                      "height": 6
+                    },
+                    {
+                      "type": "text",
+                      "id": "3wfCj",
+                      "name": "badgeText",
+                      "fill": "$error",
+                      "content": "HTTP 404 — Not Found",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LYOfO",
+                  "name": "Divider",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "$border"
+                },
+                {
+                  "type": "frame",
+                  "id": "D8vCv",
+                  "name": "Actions",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "eEhb0",
+                      "name": "Go Back Button",
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$radius-sm",
+                      "gap": 6,
+                      "padding": [
+                        10,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "qkL6R",
+                          "name": "goBackLabel",
+                          "fill": "$foreground-inverse",
+                          "content": "Go Back",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "pWhvE",
+                      "name": "Retry Button",
+                      "cornerRadius": "$radius-sm",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$border"
+                      },
+                      "padding": [
+                        10,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "O6JCt",
+                          "name": "retryLabel",
+                          "fill": "$foreground-primary",
+                          "content": "Try Again",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "4Exta",
+              "name": "Hints",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                8,
+                0,
+                0,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "s9s8L",
+                  "name": "hintsTitle",
+                  "fill": "$foreground-secondary",
+                  "content": "Possible reasons",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "GSoQG",
+                  "name": "Hints List",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rg78Z",
+                      "name": "h1",
+                      "fill": "$foreground-muted",
+                      "content": "• The repository may be private or restricted",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cFo5T",
+                      "name": "h2",
+                      "fill": "$foreground-muted",
+                      "content": "• The URL may contain a typo",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "j8yfG",
+                      "name": "h3",
+                      "fill": "$foreground-muted",
+                      "content": "• The repository may have been deleted or renamed",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
-  ]
+  ],
+  "variables": {
+    "accent-hover": {
+      "type": "color",
+      "value": "#4F46E5"
+    },
+    "accent-muted": {
+      "type": "color",
+      "value": "#052E16"
+    },
+    "accent-primary": {
+      "type": "color",
+      "value": "#6366F1"
+    },
+    "border": {
+      "type": "color",
+      "value": "#E5E7EB"
+    },
+    "border-focus": {
+      "type": "color",
+      "value": "#6366F1"
+    },
+    "error": {
+      "type": "color",
+      "value": "#EF4444"
+    },
+    "error-muted": {
+      "type": "color",
+      "value": "#450A0A"
+    },
+    "foreground-inverse": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "foreground-muted": {
+      "type": "color",
+      "value": "#9CA3AF"
+    },
+    "foreground-primary": {
+      "type": "color",
+      "value": "#1A1A1A"
+    },
+    "foreground-secondary": {
+      "type": "color",
+      "value": "#6B7280"
+    },
+    "radius-lg": {
+      "type": "number",
+      "value": 16
+    },
+    "radius-md": {
+      "type": "number",
+      "value": 12
+    },
+    "radius-sm": {
+      "type": "number",
+      "value": 8
+    },
+    "surface-card": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "surface-input": {
+      "type": "color",
+      "value": "#F5F5F5"
+    },
+    "surface-primary": {
+      "type": "color",
+      "value": "#FAFAFA"
+    },
+    "surface-secondary": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "accent-light": {
+      "type": "color",
+      "value": "#EEF2FF"
+    },
+    "checked-bg": {
+      "type": "color",
+      "value": "#6366F1"
+    },
+    "error-light": {
+      "type": "color",
+      "value": "#FEF2F2"
+    },
+    "surface-hover": {
+      "type": "color",
+      "value": "#F0F0F0"
+    }
+  }
 }
