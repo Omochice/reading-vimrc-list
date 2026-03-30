@@ -25,13 +25,16 @@
   <h1><span class="mono">!reading_vimrc</span><span class="sans"> Listing App</span></h1>
   <p class="subtitle">Explore and discover vimrc configurations from any GitHub repository.
 Find inspiration for your own Vim setup.</p>
-  <form onsubmit={handleSubmit}>
-    <input type="text" bind:value={url} placeholder="owner/repo or https://github.com/owner/repo" />
-    <button type="submit">Submit</button>
+  <div class="card">
+    <label for="repo-input">Repository</label>
+    <form onsubmit={handleSubmit}>
+      <input id="repo-input" type="text" bind:value={url} placeholder="owner/repo or https://github.com/owner/repo" />
+      <button type="submit">Submit</button>
+    </form>
     {#if error}
       <p role="alert">{error}</p>
     {/if}
-  </form>
+  </div>
 </div>
 
 <style>
@@ -59,6 +62,63 @@ Find inspiration for your own Vim setup.</p>
     font-family: var(--font-heading, "Geist", system-ui, sans-serif);
     font-size: 32px;
     font-weight: 700;
+  }
+
+  .card {
+    background: var(--surface-card, #fff);
+    border-radius: var(--radius-lg, 12px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    padding: 28px;
+    width: 480px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .card label {
+    font-family: var(--font-body, system-ui, sans-serif);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--foreground-primary, #1a1a1a);
+  }
+
+  form {
+    display: flex;
+    gap: 12px;
+  }
+
+  form input {
+    flex: 1;
+    height: 44px;
+    background: var(--surface-input, #f9fafb);
+    border: 1px solid var(--border, #e5e7eb);
+    border-radius: var(--radius-sm, 6px);
+    font-family: var(--font-mono, monospace);
+    font-size: 14px;
+    padding: 0 14px;
+    color: var(--foreground-primary, #1a1a1a);
+  }
+
+  form button {
+    border-radius: var(--radius-sm, 6px);
+    background: var(--accent-primary, #6366f1);
+    height: 44px;
+    padding: 0 24px;
+    border: none;
+    font-family: var(--font-body, system-ui, sans-serif);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--foreground-inverse, #fff);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .card [role="alert"] {
+    font-family: var(--font-body, system-ui, sans-serif);
+    font-size: 13px;
+    color: var(--error, #ef4444);
+    margin: 0;
   }
 
   .subtitle {

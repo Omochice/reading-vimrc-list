@@ -61,6 +61,11 @@ describe("RepoInput", () => {
     expect(screen.getByText(/Explore and discover/)).toBeDefined();
   });
 
+  test("renders a Repository label for the input", () => {
+    render(RepoInput, { props: { onSubmit: () => {} } });
+    expect(screen.getByLabelText("Repository")).toBeTruthy();
+  });
+
   test("shows error message and does not call onSubmit for an invalid URL", async () => {
     const onSubmit = vi.fn();
     render(RepoInput, { props: { onSubmit } });
