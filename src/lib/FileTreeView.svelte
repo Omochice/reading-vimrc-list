@@ -4,7 +4,7 @@
   import { fetchDefaultBranch, fetchTree } from "./fetchTree";
   import { buildTree } from "./buildTree";
   import { buildCommand } from "./buildCommand";
-  import { FolderGit2, GitBranch } from "lucide-svelte";
+  import { FolderGit2, GitBranch, Copy } from "lucide-svelte";
 
   type Props = {
     owner: string;
@@ -20,6 +20,8 @@
   let error = $state<string | null>(null);
   let selectedPaths = $state(new Set<string>());
   let toastVisible = $state(false);
+
+  let totalItemCount = $derived(tree.flatMap(getAllFilePaths).length);
 
   function getAllFilePaths(node: TreeNode): string[] {
     if (node.type === "file") return [node.path];
@@ -117,22 +119,30 @@
       <span>{branch}</span>
     </span>
   </div>
-  <div>
-    {#each tree as node}
-      <TreeNodeComponent
-        {node}
-        {selectedPaths}
-        onToggle={handleToggle}
-        onDirectoryToggle={handleDirectoryToggle}
-      />
-    {/each}
+  <div class="tree-card">
+    <div class="card-header">
+      <span class="header-label">Select files</span>
+      <span class="header-count">{totalItemCount} items</span>
+    </div>
+    <div class="tree-list">
+      {#each tree as node}
+        <TreeNodeComponent
+          {node}
+          {selectedPaths}
+          onToggle={handleToggle}
+          onDirectoryToggle={handleDirectoryToggle}
+        />
+      {/each}
+    </div>
+    <div class="card-divider"></div>
+    <div class="card-footer">
+      <span class="selected-count">{selectedPaths.size} files selected</span>
+      <button class="copy-btn" disabled={selectedPaths.size === 0} onclick={handleCopy}>
+        <Copy size={16} color="var(--foreground-inverse, #fff)" />
+        <span>Copy</span>
+      </button>
+    </div>
   </div>
-  <button
-    disabled={selectedPaths.size === 0}
-    onclick={handleCopy}
-  >
-    Copy
-  </button>
   {#if toastVisible}
     <p role="status">Copied to clipboard</p>
   {/if}
@@ -265,6 +275,34 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+  }
+
+  .hints {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-top: 8px;
+  }
+
+  .hints-title {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--foreground-secondary);
+  }
+
+  .hints-list {
+    list-style: disc;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--foreground-muted);
   }
 
   .btn-outline {

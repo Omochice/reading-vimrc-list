@@ -159,7 +159,9 @@ describe("FileTreeView", () => {
     });
 
     await waitFor(() => {
-      expect(screen.getByText(/private/)).toBeTruthy();
+      expect(
+        screen.getByText("The repository may be private or restricted"),
+      ).toBeTruthy();
     });
   });
 
@@ -211,6 +213,42 @@ describe("FileTreeView", () => {
       .querySelector("input") as HTMLInputElement;
 
     expect(childCheckbox.checked).toBe(true);
+  });
+
+  it("renders Select files header text", async () => {
+    setupSuccessfulFetch();
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText("Select files")).toBeTruthy();
+    });
+  });
+
+  it("renders item count in header", async () => {
+    setupSuccessfulFetch();
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText(/\d+ items/)).toBeTruthy();
+    });
+  });
+
+  it("renders selected file count in footer", async () => {
+    setupSuccessfulFetch();
+
+    render(FileTreeView, {
+      props: { owner: "test-owner", repo: "test-repo" },
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText(/0 files selected/)).toBeTruthy();
+    });
   });
 
   it("disables copy button when no files are selected", async () => {
