@@ -1,0 +1,135 @@
+:root {
+  --text: #374151;
+  --text-h: #111827;
+  --bg: #fff;
+  --border: #d1d5db;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --error: #dc2626;
+  --success: #16a34a;
+  --muted: #6b7280;
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 15px/1.5 var(--sans);
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #d1d5db;
+    --text-h: #f3f4f6;
+    --bg: #111827;
+    --border: #374151;
+    --accent: #60a5fa;
+    --accent-hover: #93bbfd;
+    --error: #f87171;
+    --success: #4ade80;
+    --muted: #9ca3af;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+form input[type="text"] {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-family: var(--sans);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+  outline: none;
+}
+
+form input[type="text"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 15px;
+  font-family: var(--sans);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+[role="alert"] {
+  color: var(--error);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--text-h);
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+button[aria-label="toggle"] {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  color: var(--muted);
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+button[aria-label="toggle"]:hover {
+  color: var(--text-h);
+}
+
+[role="status"] {
+  color: var(--success);
+  font-size: 14px;
+  margin-top: 8px;
+}
