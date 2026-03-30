@@ -2,6 +2,7 @@
   import NavBar from "./lib/NavBar.svelte";
   import RepoInput from "./lib/RepoInput.svelte";
   import FileTreeView from "./lib/FileTreeView.svelte";
+  import Footer from "./lib/Footer.svelte";
 
   type Screen =
     | { screen: "input" }
@@ -22,6 +23,7 @@
     <FileTreeView owner={current.owner} repo={current.repo} />
   {/if}
 </main>
+<Footer />
 
 <style>
   main {
