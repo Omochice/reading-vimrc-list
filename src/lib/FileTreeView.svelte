@@ -197,7 +197,7 @@
   .tree-card {
     background: var(--surface-card);
     border-radius: var(--radius-md);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px var(--shadow-color);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -280,7 +280,7 @@
     background: var(--surface-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px var(--shadow-color);
     padding: 40px 32px;
     display: flex;
     flex-direction: column;

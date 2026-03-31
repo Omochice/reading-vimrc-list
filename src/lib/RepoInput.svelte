@@ -68,7 +68,7 @@ Find inspiration for your own Vim setup.</p>
   .card {
     background: var(--surface-card, #fff);
     border-radius: var(--radius-lg, 12px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 16px var(--shadow-color);
     padding: 28px;
     width: 480px;
     max-width: 100%;

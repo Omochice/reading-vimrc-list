@@ -17,6 +17,7 @@
   --error: light-dark(#EF4444, #f87171);
   --error-light: light-dark(#FEF2F2, #7F1D1D);
   --success: light-dark(#16a34a, #4ade80);
+  --shadow-color: light-dark(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.3));
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
