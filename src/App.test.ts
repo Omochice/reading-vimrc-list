@@ -68,7 +68,7 @@ describe("integration smoke tests", () => {
     expect(screen.getAllByText(/Listing App/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getByLabelText("Repository")).toBeTruthy();
     expect(screen.getByText(/Accepted formats/)).toBeTruthy();
-    expect(screen.getByText(/A tool for exploring/)).toBeTruthy();
+    expect(screen.getByText(/A helper app/)).toBeTruthy();
   });
 
   it("tree screen renders repo info and tree card", async () => {
