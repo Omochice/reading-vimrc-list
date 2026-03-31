@@ -99,6 +99,7 @@ Find inspiration for your own Vim setup.</p>
     font-size: 14px;
     padding: 0 14px;
     color: var(--foreground-primary, #1a1a1a);
+    box-sizing: border-box;
   }
 
   form button {
@@ -124,8 +125,8 @@ Find inspiration for your own Vim setup.</p>
     flex-direction: column;
   }
 
-  form.has-error button {
-    width: 100%;
+  form.has-error input {
+    flex: none;
   }
 
   .card [role="alert"] {
