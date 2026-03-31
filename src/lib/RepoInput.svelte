@@ -54,6 +54,7 @@ Find inspiration for your own Vim setup.</p>
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: baseline;
     gap: 0.25em;
   }
 
