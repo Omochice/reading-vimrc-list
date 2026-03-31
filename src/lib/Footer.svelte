@@ -15,7 +15,7 @@
   }
 
   .footer a {
-    color: var(--foreground-muted, #9ca3af);
+    color: inherit;
     text-decoration: underline;
     text-underline-offset: 2px;
   }
