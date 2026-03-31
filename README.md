@@ -9,7 +9,7 @@ An app for registering files for the [vimrc読書会](https://vim-jp.org/reading
 - Accepts GitHub repository URLs (`https://github.com/owner/repo`) and shorthand notation (`owner/repo`)
 - Fetches the full file tree from the GitHub API
 - Displays files and directories in a hierarchical tree view
-- Write to clipboard in the format `!reading_vimrc next {paths...}`
+- Writes to clipboard in the format `!reading_vimrc next {paths...}`
 
 ## License
 
