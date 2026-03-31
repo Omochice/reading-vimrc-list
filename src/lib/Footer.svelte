@@ -1,5 +1,5 @@
 <footer class="footer">
-  <span>reading-vimrc — A tool for exploring Vim configurations</span>
+  <span>GitHub: <a href="https://github.com/Omochice/reading-vimrc-list">Omochice/reading-vimrc-list</a></span>
 </footer>
 
 <style>
@@ -12,5 +12,15 @@
     font-family: var(--font-body, system-ui, sans-serif);
     font-size: 12px;
     color: var(--foreground-muted, #9ca3af);
+  }
+
+  .footer a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .footer a:hover {
+    color: var(--foreground, #e5e7eb);
   }
 </style>

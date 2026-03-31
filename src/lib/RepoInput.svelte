@@ -23,8 +23,7 @@
 
 <div class="container">
   <h1><span class="mono">!reading_vimrc</span><span class="sans">Listing App</span></h1>
-  <p class="subtitle">Explore and discover vimrc configurations from any GitHub repository.
-Find inspiration for your own Vim setup.</p>
+  <p class="subtitle">A helper app for registering files for the <a href="https://vim-jp.org/reading-vimrc/">vimrc読書会</a>.</p>
   <div class="card">
     <label for="repo-input">Repository</label>
     <form onsubmit={handleSubmit}>
@@ -143,6 +142,16 @@ Find inspiration for your own Vim setup.</p>
     text-align: center;
     margin: 0;
     white-space: pre-line;
+  }
+
+  .subtitle a {
+    color: var(--foreground-secondary, #6b7280);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .subtitle a:hover {
+    color: var(--foreground-primary, #1a1a1a);
   }
 
   .helper {

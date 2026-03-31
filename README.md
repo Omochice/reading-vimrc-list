@@ -1,6 +1,6 @@
 # reading_vimrc Listing App
 
-An app for registering files for the [vimrc読書会](https://vim-jp.org/reading-vimrc/).
+A helper app for registering files for the [vimrc読書会](https://vim-jp.org/reading-vimrc/).
 
 [reading_vimrc Listing App](https://omochice.github.io/reading-vimrc-list/)
 

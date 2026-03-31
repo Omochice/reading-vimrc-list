@@ -58,7 +58,7 @@ describe("RepoInput", () => {
 
   test("renders the subtitle", () => {
     render(RepoInput, { props: { onSubmit: () => {} } });
-    expect(screen.getByText(/Explore and discover/)).toBeDefined();
+    expect(screen.getByText(/A helper app/)).toBeDefined();
   });
 
   test("renders accepted formats helper text", () => {
