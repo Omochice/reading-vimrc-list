@@ -96,6 +96,7 @@ Find inspiration for your own Vim setup.</p>
 
   form input {
     flex: 1;
+    min-width: 0;
     height: 44px;
     background: var(--surface-input, #f9fafb);
     border: 1px solid var(--border, #e5e7eb);
