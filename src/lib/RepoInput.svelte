@@ -126,7 +126,6 @@ Find inspiration for your own Vim setup.</p>
   }
 
   form.has-error input {
-    width: 100%;
     flex: none;
   }
 
