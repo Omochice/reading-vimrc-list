@@ -22,7 +22,7 @@
 </script>
 
 <div class="container">
-  <h1><span class="mono">!reading_vimrc</span><span class="sans"> Listing App</span></h1>
+  <h1><span class="mono">!reading_vimrc</span><span class="sans">Listing App</span></h1>
   <p class="subtitle">Explore and discover vimrc configurations from any GitHub repository.
 Find inspiration for your own Vim setup.</p>
   <div class="card">
@@ -51,6 +51,10 @@ Find inspiration for your own Vim setup.</p>
 
   h1 {
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25em;
   }
 
   h1 .mono {

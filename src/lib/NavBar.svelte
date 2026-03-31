@@ -6,7 +6,7 @@
   <BookOpen size={20} color="var(--accent-primary, #6366F1)" />
   <span class="title">
     <span class="mono">!reading_vimrc</span>
-    <span class="sans"> Listing App</span>
+    <span class="sans">Listing App</span>
   </span>
 </header>
 
@@ -24,6 +24,8 @@
   .title {
     display: flex;
     align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25em;
   }
 
   .mono {
