@@ -129,10 +129,6 @@ Find inspiration for your own Vim setup.</p>
     flex: none;
   }
 
-  form.has-error button {
-    width: 100%;
-  }
-
   .card [role="alert"] {
     font-family: var(--font-body, system-ui, sans-serif);
     font-size: 13px;
