@@ -9,58 +9,58 @@ importers:
   .:
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.4.9
+        specifier: 2.4.9
         version: 2.4.9
       '@fontsource-variable/geist':
-        specifier: ^5.2.8
+        specifier: 5.2.8
         version: 5.2.8
       '@fontsource-variable/geist-mono':
-        specifier: ^5.2.7
+        specifier: 5.2.7
         version: 5.2.7
       '@fontsource-variable/inter':
-        specifier: ^5.2.8
+        specifier: 5.2.8
         version: 5.2.8
       '@sveltejs/mcp':
-        specifier: ^0.1.22
+        specifier: 0.1.22
         version: 0.1.22(typescript@5.9.3)
       '@sveltejs/vite-plugin-svelte':
-        specifier: ^7.0.0
+        specifier: 7.0.0
         version: 7.0.0(svelte@5.55.1)(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0))
       '@testing-library/svelte':
-        specifier: ^5.3.1
+        specifier: 5.3.1
         version: 5.3.1(svelte@5.55.1)(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0))(vitest@4.1.2(@types/node@24.12.0)(jsdom@29.0.1)(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)))
       '@tsconfig/svelte':
-        specifier: ^5.0.8
+        specifier: 5.0.8
         version: 5.0.8
       '@types/node':
-        specifier: ^24.12.0
+        specifier: 24.12.0
         version: 24.12.0
       jsdom:
-        specifier: ^29.0.1
+        specifier: 29.0.1
         version: 29.0.1
       lucide-svelte:
-        specifier: ^1.0.1
+        specifier: 1.0.1
         version: 1.0.1(svelte@5.55.1)
       npm-run-all2:
-        specifier: ^8.0.4
+        specifier: 8.0.4
         version: 8.0.4
       sort-package-json:
-        specifier: ^3.6.1
+        specifier: 3.6.1
         version: 3.6.1
       svelte:
-        specifier: ^5.53.12
+        specifier: 5.55.1
         version: 5.55.1
       svelte-check:
-        specifier: ^4.4.5
+        specifier: 4.4.5
         version: 4.4.5(picomatch@4.0.4)(svelte@5.55.1)(typescript@5.9.3)
       typescript:
-        specifier: ~5.9.3
+        specifier: 5.9.3
         version: 5.9.3
       vite:
-        specifier: ^8.0.1
+        specifier: 8.0.3
         version: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)
       vitest:
-        specifier: ^4.1.2
+        specifier: 4.1.2
         version: 4.1.2(@types/node@24.12.0)(jsdom@29.0.1)(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0))
 
 packages:
