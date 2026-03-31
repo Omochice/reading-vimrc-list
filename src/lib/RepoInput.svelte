@@ -31,9 +31,7 @@ Find inspiration for your own Vim setup.</p>
       <input id="repo-input" type="text" bind:value={url} placeholder="owner/repo or https://github.com/owner/repo" aria-invalid={error ? "true" : undefined} />
       <button type="submit">Submit</button>
     </form>
-    {#if error}
-      <p role="alert">{error}</p>
-    {/if}
+    <p role="alert" class:hidden={!error}>{error || "\u00a0"}</p>
   </div>
   <p class="helper">Accepted formats: owner/repo  ·  https://github.com/owner/repo</p>
 </div>
@@ -132,6 +130,10 @@ Find inspiration for your own Vim setup.</p>
     font-size: 13px;
     color: var(--error, #ef4444);
     margin: 0;
+  }
+
+  .card [role="alert"].hidden {
+    visibility: hidden;
   }
 
   .subtitle {
