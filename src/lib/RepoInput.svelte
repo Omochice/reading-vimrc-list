@@ -27,13 +27,11 @@
 Find inspiration for your own Vim setup.</p>
   <div class="card">
     <label for="repo-input">Repository</label>
-    <form class:has-error={error} onsubmit={handleSubmit}>
+    <form onsubmit={handleSubmit}>
       <input id="repo-input" type="text" bind:value={url} placeholder="owner/repo or https://github.com/owner/repo" aria-invalid={error ? "true" : undefined} />
       <button type="submit">Submit</button>
     </form>
-    {#if error}
-      <p role="alert">{error}</p>
-    {/if}
+    <p role="alert" class:hidden={!error}>{error || "\u00a0"}</p>
   </div>
   <p class="helper">Accepted formats: owner/repo  ·  https://github.com/owner/repo</p>
 </div>
@@ -96,6 +94,7 @@ Find inspiration for your own Vim setup.</p>
 
   form input {
     flex: 1;
+    min-width: 0;
     height: 44px;
     background: var(--surface-input, #f9fafb);
     border: 1px solid var(--border, #e5e7eb);
@@ -126,19 +125,15 @@ Find inspiration for your own Vim setup.</p>
     border-color: var(--error, #ef4444);
   }
 
-  form.has-error {
-    flex-direction: column;
-  }
-
-  form.has-error input {
-    flex: none;
-  }
-
   .card [role="alert"] {
     font-family: var(--font-body, system-ui, sans-serif);
     font-size: 13px;
     color: var(--error, #ef4444);
     margin: 0;
+  }
+
+  .card [role="alert"].hidden {
+    visibility: hidden;
   }
 
   .subtitle {

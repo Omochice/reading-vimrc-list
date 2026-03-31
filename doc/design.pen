@@ -35,47 +35,11 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "frame",
-              "id": "cHYep",
-              "name": "heading",
-              "justifyContent": "center",
-              "alignItems": "end",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "8uZTs",
-                  "name": "t5a",
-                  "fill": "$foreground-primary",
-                  "content": "!reading_vimrc",
-                  "fontFamily": "Geist Mono",
-                  "fontSize": 32,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "MukUg",
-                  "name": "t5b",
-                  "fill": "$foreground-primary",
-                  "content": " Listing App",
-                  "fontFamily": "Geist",
-                  "fontSize": 32,
-                  "fontWeight": "700"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "929UO",
-              "name": "subtitle",
-              "fill": "$foreground-secondary",
-              "textGrowth": "fixed-width",
-              "width": 480,
-              "content": "Explore and discover vimrc configurations from any GitHub repository.\nFind inspiration for your own Vim setup.",
-              "lineHeight": 1.5,
-              "textAlign": "center",
-              "fontFamily": "Inter",
-              "fontSize": 16,
-              "fontWeight": "normal"
+              "id": "2WAHH",
+              "type": "ref",
+              "ref": "krAGY",
+              "width": 528,
+              "name": "hero1"
             },
             {
               "type": "frame",
@@ -898,7 +862,6 @@
       "height": 768,
       "fill": "$surface-primary",
       "layout": "vertical",
-      "alignItems": "center",
       "children": [
         {
           "id": "Ymatm",
@@ -909,189 +872,203 @@
         },
         {
           "type": "frame",
-          "id": "pLdn5",
-          "name": "Hero Section",
+          "id": "QSUP5",
+          "name": "Main Content",
           "width": "fill_container",
+          "height": "fill_container",
           "layout": "vertical",
-          "gap": 8,
+          "gap": 24,
           "padding": [
-            48,
-            24,
-            32,
+            0,
             24
           ],
+          "justifyContent": "center",
           "alignItems": "center",
           "children": [
             {
               "type": "frame",
-              "id": "xCyJ0",
-              "name": "heroTitle",
-              "justifyContent": "center",
-              "alignItems": "end",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "yFboi",
-                  "name": "t6a",
-                  "fill": "$foreground-primary",
-                  "content": "!reading_vimrc",
-                  "fontFamily": "Geist Mono",
-                  "fontSize": 28,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "FaE0K",
-                  "name": "t6b",
-                  "fill": "$foreground-primary",
-                  "content": " Listing App",
-                  "fontFamily": "Geist",
-                  "fontSize": 28,
-                  "fontWeight": "700"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "6OtZF",
-              "name": "heroSub",
-              "fill": "$foreground-secondary",
-              "content": "Enter a GitHub repository URL to explore its file tree",
-              "fontFamily": "Inter",
-              "fontSize": 16,
-              "fontWeight": "normal"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "rzZuX",
-          "name": "Form Card",
-          "width": 480,
-          "fill": "$surface-card",
-          "cornerRadius": "$radius-lg",
-          "effect": {
-            "type": "shadow",
-            "shadowType": "outer",
-            "color": "#0000000a",
-            "offset": {
-              "x": 0,
-              "y": 1
-            },
-            "blur": 2
-          },
-          "layout": "vertical",
-          "gap": 16,
-          "padding": 32,
-          "children": [
-            {
-              "type": "text",
-              "id": "ePjPz",
-              "name": "inputLabel",
-              "fill": "$foreground-primary",
-              "content": "Repository URL",
-              "fontFamily": "Inter",
-              "fontSize": 14,
-              "fontWeight": "500"
-            },
-            {
-              "type": "frame",
-              "id": "ocnzC",
-              "name": "Input Field Error",
-              "width": "fill_container",
-              "height": 44,
-              "fill": "$error-light",
-              "cornerRadius": "$radius-sm",
-              "stroke": {
-                "align": "inside",
-                "thickness": 1,
-                "fill": "$error"
-              },
+              "id": "SYUn3",
+              "name": "Hero Section",
+              "width": 528,
+              "layout": "vertical",
+              "gap": 8,
               "padding": [
-                0,
-                12
+                48,
+                24,
+                32,
+                24
               ],
               "alignItems": "center",
               "children": [
                 {
+                  "id": "6eczj",
+                  "type": "ref",
+                  "ref": "krAGY",
+                  "width": 528,
+                  "name": "hero1"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rzZuX",
+              "name": "Form Card",
+              "width": 480,
+              "fill": "$surface-card",
+              "cornerRadius": "$radius-lg",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#0000000a",
+                "offset": {
+                  "x": 0,
+                  "y": 1
+                },
+                "blur": 2
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 28,
+              "children": [
+                {
                   "type": "text",
-                  "id": "h22D7",
-                  "name": "inputText",
+                  "id": "ePjPz",
+                  "name": "inputLabel",
                   "fill": "$foreground-primary",
-                  "content": "invalid-url",
-                  "fontFamily": "Geist Mono",
+                  "content": "Repository",
+                  "fontFamily": "Inter",
                   "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "ktawG",
+                  "name": "Input Row",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "FGCMh",
+                      "name": "Input Field Error",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$error-light",
+                      "cornerRadius": "$radius-sm",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$error"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wlvBk",
+                          "name": "inputText",
+                          "fill": "$foreground-primary",
+                          "content": "invalid-url",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "yoWmy",
+                      "name": "Submit Button",
+                      "height": 44,
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$radius-sm",
+                      "padding": [
+                        0,
+                        24
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GOnAC",
+                          "name": "submitText",
+                          "fill": "$foreground-inverse",
+                          "content": "Submit",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "MixVG",
+                  "name": "errorMsg",
+                  "fill": "$error",
+                  "content": "Invalid GitHub repository URL",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "text",
-              "id": "w8Cbf",
-              "name": "errorMsg",
-              "fill": "$error",
-              "content": "Invalid GitHub repository URL",
-              "fontFamily": "Inter",
-              "fontSize": 13,
+              "id": "k47ow",
+              "name": "helperText",
+              "fill": "$foreground-muted",
+              "content": "Accepted formats:  owner/repo  ·  https://github.com/owner/repo",
+              "textAlign": "center",
+              "fontFamily": "Geist Mono",
+              "fontSize": 12,
               "fontWeight": "normal"
-            },
-            {
-              "type": "frame",
-              "id": "5puOE",
-              "name": "Submit Button",
-              "width": "fill_container",
-              "height": 44,
-              "fill": "$accent-primary",
-              "cornerRadius": "$radius-sm",
-              "justifyContent": "center",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "cztzg",
-                  "name": "submitLabel",
-                  "fill": "$foreground-inverse",
-                  "content": "Submit",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "600"
-                }
-              ]
             }
           ]
         },
         {
           "type": "frame",
-          "id": "wY3SQ",
-          "name": "Helper Text",
-          "width": 480,
-          "layout": "vertical",
-          "gap": 4,
+          "id": "0MwhD",
+          "name": "Footer",
+          "width": "fill_container",
+          "height": 48,
           "padding": [
-            16,
-            0
+            0,
+            24
           ],
+          "justifyContent": "center",
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "BSQby",
-              "name": "helperTitle",
-              "fill": "$foreground-secondary",
-              "content": "Accepted formats:",
-              "fontFamily": "Inter",
-              "fontSize": 13,
-              "fontWeight": "normal"
-            },
-            {
-              "type": "text",
-              "id": "XtCKg",
-              "name": "helperFormats",
-              "fill": "$foreground-muted",
-              "content": "owner/repo  ·  https://github.com/owner/repo",
-              "fontFamily": "Geist Mono",
-              "fontSize": 12,
-              "fontWeight": "normal"
+              "type": "frame",
+              "id": "VXnt5",
+              "name": "Footer",
+              "width": "fill_container",
+              "height": 48,
+              "padding": [
+                0,
+                24
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "1cu3A",
+                  "name": "footerText",
+                  "fill": "$foreground-muted",
+                  "content": "reading-vimrc — A tool for exploring Vim configurations",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
             }
           ]
         }
@@ -1452,7 +1429,7 @@
       "type": "frame",
       "id": "nRZNS",
       "x": 0,
-      "y": 1716,
+      "y": 3588,
       "name": "Component/Nav Bar",
       "reusable": true,
       "width": 1024,
@@ -1549,47 +1526,11 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "frame",
-              "id": "5C21H",
-              "name": "heading",
-              "justifyContent": "center",
-              "alignItems": "end",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "EX6ZW",
-                  "name": "t5a",
-                  "fill": "$foreground-primary",
-                  "content": "!reading_vimrc",
-                  "fontFamily": "Geist Mono",
-                  "fontSize": 32,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "JFP5c",
-                  "name": "t5b",
-                  "fill": "$foreground-primary",
-                  "content": " Listing App",
-                  "fontFamily": "Geist",
-                  "fontSize": 32,
-                  "fontWeight": "700"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "7FBx4",
-              "name": "subtitle",
-              "fill": "$foreground-secondary",
-              "textGrowth": "fixed-width",
-              "width": 480,
-              "content": "Explore and discover vimrc configurations from any GitHub repository.\nFind inspiration for your own Vim setup.",
-              "lineHeight": 1.5,
-              "textAlign": "center",
-              "fontFamily": "Inter",
-              "fontSize": 16,
-              "fontWeight": "normal"
+              "id": "lIran",
+              "type": "ref",
+              "ref": "krAGY",
+              "width": 528,
+              "name": "hero2"
             },
             {
               "type": "frame",
@@ -2418,7 +2359,6 @@
       "height": 768,
       "fill": "$surface-primary",
       "layout": "vertical",
-      "alignItems": "center",
       "children": [
         {
           "id": "TTTtD",
@@ -2429,189 +2369,203 @@
         },
         {
           "type": "frame",
-          "id": "KssuT",
-          "name": "Hero Section",
+          "id": "HLap3",
+          "name": "Main Content",
           "width": "fill_container",
+          "height": "fill_container",
           "layout": "vertical",
-          "gap": 8,
+          "gap": 24,
           "padding": [
-            48,
-            24,
-            32,
+            0,
             24
           ],
+          "justifyContent": "center",
           "alignItems": "center",
           "children": [
             {
               "type": "frame",
-              "id": "OJAq8",
-              "name": "heroTitle",
-              "justifyContent": "center",
-              "alignItems": "end",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "rqIbu",
-                  "name": "t6a",
-                  "fill": "$foreground-primary",
-                  "content": "!reading_vimrc",
-                  "fontFamily": "Geist Mono",
-                  "fontSize": 28,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "5pZJg",
-                  "name": "t6b",
-                  "fill": "$foreground-primary",
-                  "content": " Listing App",
-                  "fontFamily": "Geist",
-                  "fontSize": 28,
-                  "fontWeight": "700"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "YaqNc",
-              "name": "heroSub",
-              "fill": "$foreground-secondary",
-              "content": "Enter a GitHub repository URL to explore its file tree",
-              "fontFamily": "Inter",
-              "fontSize": 16,
-              "fontWeight": "normal"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "fpFJ7",
-          "name": "Form Card",
-          "width": 480,
-          "fill": "$surface-card",
-          "cornerRadius": "$radius-lg",
-          "effect": {
-            "type": "shadow",
-            "shadowType": "outer",
-            "color": "#0000000a",
-            "offset": {
-              "x": 0,
-              "y": 1
-            },
-            "blur": 2
-          },
-          "layout": "vertical",
-          "gap": 16,
-          "padding": 32,
-          "children": [
-            {
-              "type": "text",
-              "id": "93eYD",
-              "name": "inputLabel",
-              "fill": "$foreground-primary",
-              "content": "Repository URL",
-              "fontFamily": "Inter",
-              "fontSize": 14,
-              "fontWeight": "500"
-            },
-            {
-              "type": "frame",
-              "id": "prVza",
-              "name": "Input Field Error",
-              "width": "fill_container",
-              "height": 44,
-              "fill": "$error-light",
-              "cornerRadius": "$radius-sm",
-              "stroke": {
-                "align": "inside",
-                "thickness": 1,
-                "fill": "$error"
-              },
+              "id": "FP98Y",
+              "name": "Hero Section",
+              "width": 528,
+              "layout": "vertical",
+              "gap": 8,
               "padding": [
-                0,
-                12
+                48,
+                24,
+                32,
+                24
               ],
               "alignItems": "center",
               "children": [
                 {
+                  "id": "lhyX8",
+                  "type": "ref",
+                  "ref": "krAGY",
+                  "width": 528,
+                  "name": "hero2"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fpFJ7",
+              "name": "Form Card",
+              "width": 480,
+              "fill": "$surface-card",
+              "cornerRadius": "$radius-lg",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#0000000a",
+                "offset": {
+                  "x": 0,
+                  "y": 1
+                },
+                "blur": 2
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 28,
+              "children": [
+                {
                   "type": "text",
-                  "id": "WIT1Q",
-                  "name": "inputText",
+                  "id": "93eYD",
+                  "name": "inputLabel",
                   "fill": "$foreground-primary",
-                  "content": "invalid-url",
-                  "fontFamily": "Geist Mono",
+                  "content": "Repository",
+                  "fontFamily": "Inter",
                   "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "EXBlg",
+                  "name": "Input Row",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vln1g",
+                      "name": "Input Field Error",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "$error-light",
+                      "cornerRadius": "$radius-sm",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$error"
+                      },
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "TdjDp",
+                          "name": "inputText",
+                          "fill": "$foreground-primary",
+                          "content": "invalid-url",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9f8FA",
+                      "name": "Submit Button",
+                      "height": 44,
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$radius-sm",
+                      "padding": [
+                        0,
+                        24
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "g3lrJ",
+                          "name": "submitText",
+                          "fill": "$foreground-inverse",
+                          "content": "Submit",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "merN9",
+                  "name": "errorMsg",
+                  "fill": "$error",
+                  "content": "Invalid GitHub repository URL",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "text",
-              "id": "rNLQ3",
-              "name": "errorMsg",
-              "fill": "$error",
-              "content": "Invalid GitHub repository URL",
-              "fontFamily": "Inter",
-              "fontSize": 13,
+              "id": "WRIUT",
+              "name": "helperText",
+              "fill": "$foreground-muted",
+              "content": "Accepted formats:  owner/repo  ·  https://github.com/owner/repo",
+              "textAlign": "center",
+              "fontFamily": "Geist Mono",
+              "fontSize": 12,
               "fontWeight": "normal"
-            },
-            {
-              "type": "frame",
-              "id": "aupdH",
-              "name": "Submit Button",
-              "width": "fill_container",
-              "height": 44,
-              "fill": "$accent-primary",
-              "cornerRadius": "$radius-sm",
-              "justifyContent": "center",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "eg8zS",
-                  "name": "submitLabel",
-                  "fill": "$foreground-inverse",
-                  "content": "Submit",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "600"
-                }
-              ]
             }
           ]
         },
         {
           "type": "frame",
-          "id": "2yFtc",
-          "name": "Helper Text",
-          "width": 480,
-          "layout": "vertical",
-          "gap": 4,
+          "id": "0jetx",
+          "name": "Footer",
+          "width": "fill_container",
+          "height": 48,
           "padding": [
-            16,
-            0
+            0,
+            24
           ],
+          "justifyContent": "center",
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "2G9LY",
-              "name": "helperTitle",
-              "fill": "$foreground-secondary",
-              "content": "Accepted formats:",
-              "fontFamily": "Inter",
-              "fontSize": 13,
-              "fontWeight": "normal"
-            },
-            {
-              "type": "text",
-              "id": "DwoqN",
-              "name": "helperFormats",
-              "fill": "$foreground-muted",
-              "content": "owner/repo  ·  https://github.com/owner/repo",
-              "fontFamily": "Geist Mono",
-              "fontSize": 12,
-              "fontWeight": "normal"
+              "type": "frame",
+              "id": "7VEMQ",
+              "name": "Footer",
+              "width": "fill_container",
+              "height": 48,
+              "padding": [
+                0,
+                24
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Y22N7",
+                  "name": "footerText",
+                  "fill": "$foreground-muted",
+                  "content": "reading-vimrc — A tool for exploring Vim configurations",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
             }
           ]
         }
@@ -2968,6 +2922,69 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "krAGY",
+      "x": 1124,
+      "y": 3588,
+      "name": "Component/Hero Section",
+      "reusable": true,
+      "width": 528,
+      "layout": "vertical",
+      "gap": 8,
+      "padding": [
+        48,
+        24,
+        32,
+        24
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "kb7tU",
+          "name": "heroTitle",
+          "justifyContent": "center",
+          "alignItems": "end",
+          "children": [
+            {
+              "type": "text",
+              "id": "HPXt1",
+              "name": "monoTitle",
+              "fill": "$foreground-primary",
+              "content": "!reading_vimrc",
+              "fontFamily": "Geist Mono",
+              "fontSize": 32,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "6Pgoa",
+              "name": "normalTitle",
+              "fill": "$foreground-primary",
+              "content": " Listing App",
+              "fontFamily": "Geist",
+              "fontSize": 32,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "eW8M9",
+          "name": "subtitle",
+          "fill": "$foreground-secondary",
+          "textGrowth": "fixed-width",
+          "width": 480,
+          "content": "Explore and discover vimrc configurations from any GitHub repository.\nFind inspiration for your own Vim setup.",
+          "lineHeight": 1.5,
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 16,
+          "fontWeight": "normal"
         }
       ]
     }
