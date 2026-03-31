@@ -5,7 +5,7 @@ import Footer from "./Footer.svelte";
 describe("Footer", () => {
   it("renders footer text", () => {
     render(Footer);
-    expect(screen.getByText(/reading-vimrc/)).toBeTruthy();
+    expect(screen.getByText(/GitHub:/)).toBeTruthy();
   });
 
   it("renders as a footer element", () => {
