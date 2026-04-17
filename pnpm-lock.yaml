@@ -25,10 +25,10 @@ importers:
         version: 0.1.22(typescript@5.9.3)
       '@sveltejs/vite-plugin-svelte':
         specifier: 7.0.0
-        version: 7.0.0(svelte@5.55.3)(vite@8.0.8(@types/node@24.12.2))
+        version: 7.0.0(svelte@5.55.4)(vite@8.0.8(@types/node@24.12.2))
       '@testing-library/svelte':
         specifier: 5.3.1
-        version: 5.3.1(svelte@5.55.3)(vite@8.0.8(@types/node@24.12.2))(vitest@4.1.4(@types/node@24.12.2)(jsdom@29.0.2)(vite@8.0.8(@types/node@24.12.2)))
+        version: 5.3.1(svelte@5.55.4)(vite@8.0.8(@types/node@24.12.2))(vitest@4.1.4(@types/node@24.12.2)(jsdom@29.0.2)(vite@8.0.8(@types/node@24.12.2)))
       '@tsconfig/svelte':
         specifier: 5.0.8
         version: 5.0.8
@@ -40,7 +40,7 @@ importers:
         version: 29.0.2
       lucide-svelte:
         specifier: 1.0.1
-        version: 1.0.1(svelte@5.55.3)
+        version: 1.0.1(svelte@5.55.4)
       npm-run-all2:
         specifier: 8.0.4
         version: 8.0.4
@@ -48,11 +48,11 @@ importers:
         specifier: 3.6.1
         version: 3.6.1
       svelte:
-        specifier: 5.55.3
-        version: 5.55.3
+        specifier: 5.55.4
+        version: 5.55.4
       svelte-check:
         specifier: 4.4.6
-        version: 4.4.6(picomatch@4.0.4)(svelte@5.55.3)(typescript@5.9.3)
+        version: 4.4.6(picomatch@4.0.4)(svelte@5.55.4)(typescript@5.9.3)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -1116,8 +1116,8 @@ packages:
       svelte: ^4.0.0 || ^5.0.0-next.0
       typescript: '>=5.0.0'
 
-  svelte@5.55.3:
-    resolution: {integrity: sha512-dS1N+i3bA1v+c4UDb750MlN5vCO82G6vxh8HeTsPsTdJ1BLsN1zxSyDlIdBBqUjqZ/BxEwM8UrFf98aaoVnZFQ==}
+  svelte@5.55.4:
+    resolution: {integrity: sha512-q8DFohk6vUswSng95IZb9nzWJnbINZsK7OiM1snAa3qCjJBL0ZQpvMyAaVXjUukdM75J/m8UE8xwqat8Ors/zQ==}
     engines: {node: '>=18'}
 
   symbol-tree@3.2.4:
@@ -1597,12 +1597,12 @@ snapshots:
       - supports-color
       - typescript
 
-  '@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.3)(vite@8.0.8(@types/node@24.12.2))':
+  '@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.4)(vite@8.0.8(@types/node@24.12.2))':
     dependencies:
       deepmerge: 4.3.1
       magic-string: 0.30.21
       obug: 2.1.1
-      svelte: 5.55.3
+      svelte: 5.55.4
       vite: 8.0.8(@types/node@24.12.2)
       vitefu: 1.1.2(vite@8.0.8(@types/node@24.12.2))
 
@@ -1617,15 +1617,15 @@ snapshots:
       picocolors: 1.1.1
       pretty-format: 27.5.1
 
-  '@testing-library/svelte-core@1.0.0(svelte@5.55.3)':
+  '@testing-library/svelte-core@1.0.0(svelte@5.55.4)':
     dependencies:
-      svelte: 5.55.3
+      svelte: 5.55.4
 
-  '@testing-library/svelte@5.3.1(svelte@5.55.3)(vite@8.0.8(@types/node@24.12.2))(vitest@4.1.4(@types/node@24.12.2)(jsdom@29.0.2)(vite@8.0.8(@types/node@24.12.2)))':
+  '@testing-library/svelte@5.3.1(svelte@5.55.4)(vite@8.0.8(@types/node@24.12.2))(vitest@4.1.4(@types/node@24.12.2)(jsdom@29.0.2)(vite@8.0.8(@types/node@24.12.2)))':
     dependencies:
       '@testing-library/dom': 10.4.1
-      '@testing-library/svelte-core': 1.0.0(svelte@5.55.3)
-      svelte: 5.55.3
+      '@testing-library/svelte-core': 1.0.0(svelte@5.55.4)
+      svelte: 5.55.4
     optionalDependencies:
       vite: 8.0.8(@types/node@24.12.2)
       vitest: 4.1.4(@types/node@24.12.2)(jsdom@29.0.2)(vite@8.0.8(@types/node@24.12.2))
@@ -2077,9 +2077,9 @@ snapshots:
 
   lru-cache@11.2.7: {}
 
-  lucide-svelte@1.0.1(svelte@5.55.3):
+  lucide-svelte@1.0.1(svelte@5.55.4):
     dependencies:
-      svelte: 5.55.3
+      svelte: 5.55.4
 
   lz-string@1.5.0: {}
 
@@ -2251,19 +2251,19 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
-  svelte-check@4.4.6(picomatch@4.0.4)(svelte@5.55.3)(typescript@5.9.3):
+  svelte-check@4.4.6(picomatch@4.0.4)(svelte@5.55.4)(typescript@5.9.3):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       chokidar: 4.0.3
       fdir: 6.5.0(picomatch@4.0.4)
       picocolors: 1.1.1
       sade: 1.8.1
-      svelte: 5.55.3
+      svelte: 5.55.4
       typescript: 5.9.3
     transitivePeerDependencies:
       - picomatch
 
-  svelte@5.55.3:
+  svelte@5.55.4:
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/sourcemap-codec': 1.5.5
