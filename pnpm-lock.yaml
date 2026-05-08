@@ -24,8 +24,8 @@ importers:
         specifier: 0.1.22
         version: 0.1.22(typescript@5.9.3)
       '@sveltejs/vite-plugin-svelte':
-        specifier: 7.0.0
-        version: 7.0.0(svelte@5.55.5)(vite@8.0.10(@types/node@24.12.2))
+        specifier: 7.1.0
+        version: 7.1.0(svelte@5.55.5)(vite@8.0.10(@types/node@24.12.2))
       '@testing-library/svelte':
         specifier: 5.3.1
         version: 5.3.1(svelte@5.55.5)(vite@8.0.10(@types/node@24.12.2))(vitest@4.1.5(@types/node@24.12.2)(jsdom@29.1.1)(vite@8.0.10(@types/node@24.12.2)))
@@ -405,8 +405,8 @@ packages:
     resolution: {integrity: sha512-hehoPCNCDYbjCF8MGxDlnlfex0uKwrKNzRri0+M/bgg3xlnlvmr8wT2J16xpyDEGQI60jJOkHkwMWNBgNeKeFQ==}
     hasBin: true
 
-  '@sveltejs/vite-plugin-svelte@7.0.0':
-    resolution: {integrity: sha512-ILXmxC7HAsnkK2eslgPetrqqW1BKSL7LktsFgqzNj83MaivMGZzluWq32m25j2mDOjmSKX7GGWahePhuEs7P/g==}
+  '@sveltejs/vite-plugin-svelte@7.1.0':
+    resolution: {integrity: sha512-atk0ZbHXKvUOpn8eG3kE0BvRcWvMubOYLLMvyLFYpf+IpLj7lfEaykMa/2Yy8o7PJ/qvxXO4SXruq8coIjq1yw==}
     engines: {node: ^20.19 || ^22.12 || >=24}
     peerDependencies:
       svelte: ^5.46.4
@@ -1609,7 +1609,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.5)(vite@8.0.10(@types/node@24.12.2))':
+  '@sveltejs/vite-plugin-svelte@7.1.0(svelte@5.55.5)(vite@8.0.10(@types/node@24.12.2))':
     dependencies:
       deepmerge: 4.3.1
       magic-string: 0.30.21
