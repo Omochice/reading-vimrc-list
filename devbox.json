@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.17.2/.schema/devbox.schema.json",
   "packages": [
-    "zizmor@1.25.0",
+    "zizmor@1.25.2",
     "actionlint@1.7.12",
     "ghalint@1.5.6"
   ],
