@@ -25,10 +25,10 @@ importers:
         version: 0.1.23(typescript@5.9.3)
       '@sveltejs/vite-plugin-svelte':
         specifier: 7.1.2
-        version: 7.1.2(svelte@5.55.9)(vite@8.0.14(@types/node@24.12.4))
+        version: 7.1.2(svelte@5.55.10)(vite@8.0.14(@types/node@24.12.4))
       '@testing-library/svelte':
         specifier: 5.3.1
-        version: 5.3.1(svelte@5.55.9)(vite@8.0.14(@types/node@24.12.4))(vitest@4.1.7(@types/node@24.12.4)(jsdom@29.1.1)(vite@8.0.14(@types/node@24.12.4)))
+        version: 5.3.1(svelte@5.55.10)(vite@8.0.14(@types/node@24.12.4))(vitest@4.1.7(@types/node@24.12.4)(jsdom@29.1.1)(vite@8.0.14(@types/node@24.12.4)))
       '@tsconfig/svelte':
         specifier: 5.0.8
         version: 5.0.8
@@ -40,7 +40,7 @@ importers:
         version: 29.1.1
       lucide-svelte:
         specifier: 1.0.1
-        version: 1.0.1(svelte@5.55.9)
+        version: 1.0.1(svelte@5.55.10)
       npm-run-all2:
         specifier: 9.0.1
         version: 9.0.1
@@ -48,11 +48,11 @@ importers:
         specifier: 3.6.1
         version: 3.6.1
       svelte:
-        specifier: 5.55.9
-        version: 5.55.9
+        specifier: 5.55.10
+        version: 5.55.10
       svelte-check:
         specifier: 4.4.8
-        version: 4.4.8(picomatch@4.0.4)(svelte@5.55.9)(typescript@5.9.3)
+        version: 4.4.8(picomatch@4.0.4)(svelte@5.55.10)(typescript@5.9.3)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -1122,8 +1122,8 @@ packages:
       svelte: ^4.0.0 || ^5.0.0-next.0
       typescript: '>=5.0.0'
 
-  svelte@5.55.9:
-    resolution: {integrity: sha512-fTjjT8cHLDwigcu2j3pv7Jq04LklXevPB8uBgyHNiTXv+RMNvVnrjS4UEYrLMkhuq1vpCodHjiW+z/95SDs/fg==}
+  svelte@5.55.10:
+    resolution: {integrity: sha512-v9mFVBY1USosyIWdXE7Cg4AN0ywyKCMcAhONvli8doMowEhFhMdNLKD1j7O/UnsrdVTHaUOk/jv8hD/HClVy+g==}
     engines: {node: '>=18'}
 
   symbol-tree@3.2.4:
@@ -1611,12 +1611,12 @@ snapshots:
       - supports-color
       - typescript
 
-  '@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.55.9)(vite@8.0.14(@types/node@24.12.4))':
+  '@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.55.10)(vite@8.0.14(@types/node@24.12.4))':
     dependencies:
       deepmerge: 4.3.1
       magic-string: 0.30.21
       obug: 2.1.1
-      svelte: 5.55.9
+      svelte: 5.55.10
       vite: 8.0.14(@types/node@24.12.4)
       vitefu: 1.1.2(vite@8.0.14(@types/node@24.12.4))
 
@@ -1631,15 +1631,15 @@ snapshots:
       picocolors: 1.1.1
       pretty-format: 27.5.1
 
-  '@testing-library/svelte-core@1.0.0(svelte@5.55.9)':
+  '@testing-library/svelte-core@1.0.0(svelte@5.55.10)':
     dependencies:
-      svelte: 5.55.9
+      svelte: 5.55.10
 
-  '@testing-library/svelte@5.3.1(svelte@5.55.9)(vite@8.0.14(@types/node@24.12.4))(vitest@4.1.7(@types/node@24.12.4)(jsdom@29.1.1)(vite@8.0.14(@types/node@24.12.4)))':
+  '@testing-library/svelte@5.3.1(svelte@5.55.10)(vite@8.0.14(@types/node@24.12.4))(vitest@4.1.7(@types/node@24.12.4)(jsdom@29.1.1)(vite@8.0.14(@types/node@24.12.4)))':
     dependencies:
       '@testing-library/dom': 10.4.1
-      '@testing-library/svelte-core': 1.0.0(svelte@5.55.9)
-      svelte: 5.55.9
+      '@testing-library/svelte-core': 1.0.0(svelte@5.55.10)
+      svelte: 5.55.10
     optionalDependencies:
       vite: 8.0.14(@types/node@24.12.4)
       vitest: 4.1.7(@types/node@24.12.4)(jsdom@29.1.1)(vite@8.0.14(@types/node@24.12.4))
@@ -2088,9 +2088,9 @@ snapshots:
 
   lru-cache@11.3.5: {}
 
-  lucide-svelte@1.0.1(svelte@5.55.9):
+  lucide-svelte@1.0.1(svelte@5.55.10):
     dependencies:
-      svelte: 5.55.9
+      svelte: 5.55.10
 
   lz-string@1.5.0: {}
 
@@ -2262,19 +2262,19 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
-  svelte-check@4.4.8(picomatch@4.0.4)(svelte@5.55.9)(typescript@5.9.3):
+  svelte-check@4.4.8(picomatch@4.0.4)(svelte@5.55.10)(typescript@5.9.3):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       chokidar: 4.0.3
       fdir: 6.5.0(picomatch@4.0.4)
       picocolors: 1.1.1
       sade: 1.8.1
-      svelte: 5.55.9
+      svelte: 5.55.10
       typescript: 5.9.3
     transitivePeerDependencies:
       - picomatch
 
-  svelte@5.55.9:
+  svelte@5.55.10:
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/sourcemap-codec': 1.5.5
