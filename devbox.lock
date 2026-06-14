@@ -2,8 +2,8 @@
   "lockfile_version": "1",
   "packages": {
     "actionlint@1.7.12": {
-      "last_modified": "2026-04-01T01:09:41Z",
-      "resolved": "github:NixOS/nixpkgs/62e3050a29278c985725a86704faa1e99236b51a#actionlint",
+      "last_modified": "2026-05-21T08:15:18Z",
+      "resolved": "github:NixOS/nixpkgs/4a29d733e8a7d5b824c3d8c958a946a9867b3eb2#actionlint",
       "source": "devbox-search",
       "version": "1.7.12",
       "systems": {
@@ -11,47 +11,47 @@
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/px6mca0wsmmhmbrvs6zppskx0q51hk37-actionlint-1.7.12",
+              "path": "/nix/store/586xsfximn37wd6kh7fabcby7dsing6p-actionlint-1.7.12",
               "default": true
             }
           ],
-          "store_path": "/nix/store/px6mca0wsmmhmbrvs6zppskx0q51hk37-actionlint-1.7.12"
+          "store_path": "/nix/store/586xsfximn37wd6kh7fabcby7dsing6p-actionlint-1.7.12"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/1rqkzzp0nncr34b9d7wqi4867j9hq0b0-actionlint-1.7.12",
+              "path": "/nix/store/cjcpgij5mskw07f6arfsbrdwv48mm6fi-actionlint-1.7.12",
               "default": true
             }
           ],
-          "store_path": "/nix/store/1rqkzzp0nncr34b9d7wqi4867j9hq0b0-actionlint-1.7.12"
+          "store_path": "/nix/store/cjcpgij5mskw07f6arfsbrdwv48mm6fi-actionlint-1.7.12"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/mqikmmhdv7slnrpqzamfwf8awgbm230y-actionlint-1.7.12",
+              "path": "/nix/store/wcnvm8r1r5jksccknmwzibxhm808mad0-actionlint-1.7.12",
               "default": true
             }
           ],
-          "store_path": "/nix/store/mqikmmhdv7slnrpqzamfwf8awgbm230y-actionlint-1.7.12"
+          "store_path": "/nix/store/wcnvm8r1r5jksccknmwzibxhm808mad0-actionlint-1.7.12"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/amlhdml9d7lg1l0mcp8bz2asvkh63x06-actionlint-1.7.12",
+              "path": "/nix/store/ccpzxcz772sv74ppx01rz6m7hnivi6nn-actionlint-1.7.12",
               "default": true
             }
           ],
-          "store_path": "/nix/store/amlhdml9d7lg1l0mcp8bz2asvkh63x06-actionlint-1.7.12"
+          "store_path": "/nix/store/ccpzxcz772sv74ppx01rz6m7hnivi6nn-actionlint-1.7.12"
         }
       }
     },
     "ghalint@1.5.6": {
-      "last_modified": "2026-05-03T08:31:49Z",
-      "resolved": "github:NixOS/nixpkgs/90c100cb48d61a0316b9479bb03f1be36d34b92a#ghalint",
+      "last_modified": "2026-05-21T08:15:18Z",
+      "resolved": "github:NixOS/nixpkgs/4a29d733e8a7d5b824c3d8c958a946a9867b3eb2#ghalint",
       "source": "devbox-search",
       "version": "1.5.6",
       "systems": {
@@ -59,47 +59,47 @@
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/ndiki1a5153wmxa4spm1dzkqy77gcvv1-ghalint-1.5.6",
+              "path": "/nix/store/b560szvyp5lrb8ylj4r5kcb32338w0a1-ghalint-1.5.6",
               "default": true
             }
           ],
-          "store_path": "/nix/store/ndiki1a5153wmxa4spm1dzkqy77gcvv1-ghalint-1.5.6"
+          "store_path": "/nix/store/b560szvyp5lrb8ylj4r5kcb32338w0a1-ghalint-1.5.6"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/pxjsry2bakqpqwaymz08i9rckbnfilj4-ghalint-1.5.6",
+              "path": "/nix/store/9yf1bq27n4k8mrfwrc67gqqxd4ssffax-ghalint-1.5.6",
               "default": true
             }
           ],
-          "store_path": "/nix/store/pxjsry2bakqpqwaymz08i9rckbnfilj4-ghalint-1.5.6"
+          "store_path": "/nix/store/9yf1bq27n4k8mrfwrc67gqqxd4ssffax-ghalint-1.5.6"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/abqi4r1rrz4ysnhhnbk9gcl1lx635lrp-ghalint-1.5.6",
+              "path": "/nix/store/8n3g1sxpy44yzzs8h9z5hr1gmmbwlbha-ghalint-1.5.6",
               "default": true
             }
           ],
-          "store_path": "/nix/store/abqi4r1rrz4ysnhhnbk9gcl1lx635lrp-ghalint-1.5.6"
+          "store_path": "/nix/store/8n3g1sxpy44yzzs8h9z5hr1gmmbwlbha-ghalint-1.5.6"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/7xcn0619vk4p0xxip00ygp7skrja11bb-ghalint-1.5.6",
+              "path": "/nix/store/vfxnl11pywj5m98ql74flnr34yjahlpb-ghalint-1.5.6",
               "default": true
             }
           ],
-          "store_path": "/nix/store/7xcn0619vk4p0xxip00ygp7skrja11bb-ghalint-1.5.6"
+          "store_path": "/nix/store/vfxnl11pywj5m98ql74flnr34yjahlpb-ghalint-1.5.6"
         }
       }
     },
     "github:NixOS/nixpkgs/nixpkgs-unstable": {
-      "last_modified": "2026-03-08T08:02:12Z",
-      "resolved": "github:NixOS/nixpkgs/608d0cadfed240589a7eea422407a547ad626a14?lastModified=1772956932&narHash=sha256-M0yS4AafhKxPPmOHGqIV0iKxgNO8bHDWdl1kOwGBwRY%3D"
+      "last_modified": "2026-06-12T12:41:42Z",
+      "resolved": "github:NixOS/nixpkgs/49a4bd0573c376468dd7996ddb6f9fa31d8c4d97?lastModified=1781268102&narHash=sha256-Zn5KTggEmUB3lXn%2FccERNcBdddE6IaOFber9dWViWDg%3D"
     },
     "zizmor@1.25.2": {
       "last_modified": "2026-05-21T08:15:18Z",
