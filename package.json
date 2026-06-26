@@ -29,7 +29,7 @@
     "npm-run-all2": "9.0.2",
     "sort-package-json": "4.0.0",
     "svelte": "5.56.3",
-    "svelte-check": "4.6.0",
+    "svelte-check": "4.7.0",
     "typescript": "6.0.3",
     "vite": "8.1.0",
     "vitest": "4.1.9"
