@@ -25,10 +25,10 @@ importers:
         version: 0.1.24(typescript@6.0.3)
       '@sveltejs/vite-plugin-svelte':
         specifier: 7.1.2
-        version: 7.1.2(svelte@5.56.4)(vite@8.1.0(@types/node@24.13.2))
+        version: 7.1.2(svelte@5.56.4)(vite@8.1.1(@types/node@24.13.2))
       '@testing-library/svelte':
         specifier: 5.4.2
-        version: 5.4.2(svelte@5.56.4)(vite@8.1.0(@types/node@24.13.2))(vitest@4.1.9(@types/node@24.13.2)(jsdom@29.1.1)(vite@8.1.0(@types/node@24.13.2)))
+        version: 5.4.2(svelte@5.56.4)(vite@8.1.1(@types/node@24.13.2))(vitest@4.1.9(@types/node@24.13.2)(jsdom@29.1.1)(vite@8.1.1(@types/node@24.13.2)))
       '@tsconfig/svelte':
         specifier: 5.0.8
         version: 5.0.8
@@ -57,11 +57,11 @@ importers:
         specifier: 6.0.3
         version: 6.0.3
       vite:
-        specifier: 8.1.0
-        version: 8.1.0(@types/node@24.13.2)
+        specifier: 8.1.1
+        version: 8.1.1(@types/node@24.13.2)
       vitest:
         specifier: 4.1.9
-        version: 4.1.9(@types/node@24.13.2)(jsdom@29.1.1)(vite@8.1.0(@types/node@24.13.2))
+        version: 4.1.9(@types/node@24.13.2)(jsdom@29.1.1)(vite@8.1.1(@types/node@24.13.2))
 
 packages:
 
@@ -1021,8 +1021,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  postcss@8.5.15:
-    resolution: {integrity: sha512-FfR8sjd4em2T6fb3I2MwAJU7HWVMr9zba+enmQeeWFfCbm+UOC/0X4DS8XtpUTMwWMGbjKYP7xjfNekzyGmB3A==}
+  postcss@8.5.16:
+    resolution: {integrity: sha512-vuwillviilfKZsg0VGj5R/YwwcHx4SLsIOI/7K6mQkWx+l5cUHTjj5g0AasTBcyXsbfTgrwsUNmVUb5xVwyPwg==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -1199,8 +1199,8 @@ packages:
       typescript:
         optional: true
 
-  vite@8.1.0:
-    resolution: {integrity: sha512-BuJcQK/56NQTWDGn4ABea3q4SSBdNPWwNZKTkkUpcMPnLoquSYH8llRtSUIgoL1KSCpHt5eghLShn50mH36y7Q==}
+  vite@8.1.1:
+    resolution: {integrity: sha512-X/05/cT+VITy2AeDc1der6smvGWWREtL4hPbPTaVbjSBuuWkmNOjR6HP3NzqcQA2nF6VHGUPaFRJyft/2AE9Kg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -1613,14 +1613,14 @@ snapshots:
       - supports-color
       - typescript
 
-  '@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.0(@types/node@24.13.2))':
+  '@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.1(@types/node@24.13.2))':
     dependencies:
       deepmerge: 4.3.1
       magic-string: 0.30.21
       obug: 2.1.1
       svelte: 5.56.4
-      vite: 8.1.0(@types/node@24.13.2)
-      vitefu: 1.1.2(vite@8.1.0(@types/node@24.13.2))
+      vite: 8.1.1(@types/node@24.13.2)
+      vitefu: 1.1.2(vite@8.1.1(@types/node@24.13.2))
 
   '@testing-library/dom@10.4.1':
     dependencies:
@@ -1637,14 +1637,14 @@ snapshots:
     dependencies:
       svelte: 5.56.4
 
-  '@testing-library/svelte@5.4.2(svelte@5.56.4)(vite@8.1.0(@types/node@24.13.2))(vitest@4.1.9(@types/node@24.13.2)(jsdom@29.1.1)(vite@8.1.0(@types/node@24.13.2)))':
+  '@testing-library/svelte@5.4.2(svelte@5.56.4)(vite@8.1.1(@types/node@24.13.2))(vitest@4.1.9(@types/node@24.13.2)(jsdom@29.1.1)(vite@8.1.1(@types/node@24.13.2)))':
     dependencies:
       '@testing-library/dom': 10.4.1
       '@testing-library/svelte-core': 1.1.3(svelte@5.56.4)
       svelte: 5.56.4
     optionalDependencies:
-      vite: 8.1.0(@types/node@24.13.2)
-      vitest: 4.1.9(@types/node@24.13.2)(jsdom@29.1.1)(vite@8.1.0(@types/node@24.13.2))
+      vite: 8.1.1(@types/node@24.13.2)
+      vitest: 4.1.9(@types/node@24.13.2)(jsdom@29.1.1)(vite@8.1.1(@types/node@24.13.2))
 
   '@tsconfig/svelte@5.0.8': {}
 
@@ -1681,13 +1681,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
-  '@vitest/mocker@4.1.9(vite@8.1.0(@types/node@24.13.2))':
+  '@vitest/mocker@4.1.9(vite@8.1.1(@types/node@24.13.2))':
     dependencies:
       '@vitest/spy': 4.1.9
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 8.1.0(@types/node@24.13.2)
+      vite: 8.1.1(@types/node@24.13.2)
 
   '@vitest/pretty-format@4.1.9':
     dependencies:
@@ -2168,7 +2168,7 @@ snapshots:
 
   pidtree@1.0.0: {}
 
-  postcss@8.5.15:
+  postcss@8.5.16:
     dependencies:
       nanoid: 3.3.12
       picocolors: 1.1.1
@@ -2358,25 +2358,25 @@ snapshots:
     optionalDependencies:
       typescript: 6.0.3
 
-  vite@8.1.0(@types/node@24.13.2):
+  vite@8.1.1(@types/node@24.13.2):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
-      postcss: 8.5.15
+      postcss: 8.5.16
       rolldown: 1.1.3
       tinyglobby: 0.2.17
     optionalDependencies:
       '@types/node': 24.13.2
       fsevents: 2.3.3
 
-  vitefu@1.1.2(vite@8.1.0(@types/node@24.13.2)):
+  vitefu@1.1.2(vite@8.1.1(@types/node@24.13.2)):
     optionalDependencies:
-      vite: 8.1.0(@types/node@24.13.2)
+      vite: 8.1.1(@types/node@24.13.2)
 
-  vitest@4.1.9(@types/node@24.13.2)(jsdom@29.1.1)(vite@8.1.0(@types/node@24.13.2)):
+  vitest@4.1.9(@types/node@24.13.2)(jsdom@29.1.1)(vite@8.1.1(@types/node@24.13.2)):
     dependencies:
       '@vitest/expect': 4.1.9
-      '@vitest/mocker': 4.1.9(vite@8.1.0(@types/node@24.13.2))
+      '@vitest/mocker': 4.1.9(vite@8.1.1(@types/node@24.13.2))
       '@vitest/pretty-format': 4.1.9
       '@vitest/runner': 4.1.9
       '@vitest/snapshot': 4.1.9
@@ -2393,7 +2393,7 @@ snapshots:
       tinyexec: 1.0.4
       tinyglobby: 0.2.17
       tinyrainbow: 3.1.0
-      vite: 8.1.0(@types/node@24.13.2)
+      vite: 8.1.1(@types/node@24.13.2)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.13.2
