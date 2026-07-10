@@ -20,7 +20,7 @@
     "@fontsource-variable/geist-mono": "5.2.8",
     "@fontsource-variable/inter": "5.2.8",
     "@sveltejs/mcp": "0.1.24",
-    "@sveltejs/vite-plugin-svelte": "7.1.4",
+    "@sveltejs/vite-plugin-svelte": "7.2.0",
     "@testing-library/svelte": "5.4.2",
     "@tsconfig/svelte": "5.0.8",
     "@types/node": "24.13.2",
