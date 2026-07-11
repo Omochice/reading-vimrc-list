@@ -23,7 +23,7 @@
     "@sveltejs/vite-plugin-svelte": "7.2.0",
     "@testing-library/svelte": "5.4.2",
     "@tsconfig/svelte": "5.0.8",
-    "@types/node": "24.13.2",
+    "@types/node": "24.13.3",
     "jsdom": "29.1.1",
     "lucide-svelte": "1.0.1",
     "npm-run-all2": "9.0.2",
