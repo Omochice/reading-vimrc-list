@@ -21,8 +21,8 @@ importers:
         specifier: 5.3.0
         version: 5.3.0
       '@sveltejs/mcp':
-        specifier: 0.1.24
-        version: 0.1.24(supports-color@7.2.0)(typescript@6.0.3)
+        specifier: 0.1.26
+        version: 0.1.26(supports-color@7.2.0)(typescript@6.0.3)
       '@sveltejs/vite-plugin-svelte':
         specifier: 7.3.0
         version: 7.3.0(svelte@5.57.0)(vite@8.2.2(@types/node@24.13.3))
@@ -391,8 +391,8 @@ packages:
     resolution: {integrity: sha512-VT3qmUb8pRV2QrZjd8iAmtg8lf4W0TIjZbvXtz5MKei/q96teWZgGJyyidJzOjzZzvdq616eSRVeMYIQChUTAQ==}
     engines: {node: '>= 18.0.0'}
 
-  '@sveltejs/mcp@0.1.24':
-    resolution: {integrity: sha512-HkM8zSABWtRBfWHHpgqi2jQfI/5yVW69zd2+CXD/ViV3BHBL74IMFF8JCg86HqXICMnHeSfyUmChij/BeC/Xgg==}
+  '@sveltejs/mcp@0.1.26':
+    resolution: {integrity: sha512-AhRME2FGrSmPbLc6bQYgpNNO3msWQ6qH00Lwl6sDs9s7FgK2cDn9+BBxKDahYh2ATfk/+Jr4tQHL1jeQ5AyNIg==}
     hasBin: true
 
   '@sveltejs/vite-plugin-svelte@7.3.0':
@@ -1143,8 +1143,8 @@ packages:
     resolution: {integrity: sha512-I4FZcVFcqCRuT0ph6dCDpPuO4Xgzvh+spkcTr1gK7peIvxWauoloVO0vuy1FQnijT63ss6AsHB6+OIM4aXHbPg==}
     hasBin: true
 
-  tmcp@1.19.3:
-    resolution: {integrity: sha512-plz/TLKNFrdfQN32LjCTN6ULy6pynfGPgHcU7KGCI5dBrxQ9Mub99SmcYuzxEkLjJooQuOD3gosSwZEl1htOtw==}
+  tmcp@1.20.0-next.1:
+    resolution: {integrity: sha512-InQcjBBHgZvcQvEIK86CtFZFl/Tq2OO8ry8mWynn7uHvO7BCYdk56rzoRImFK5MIJJ8k0L0a/z7kL9YOHPQUaw==}
 
   tough-cookie@6.0.1:
     resolution: {integrity: sha512-LktZQb3IeoUWB9lqR5EWTHgW/VTITCXg4D21M+lvybRVdylLrRMnqaIONLVb5mav8vM19m44HIcGq4qASeu2Qw==}
@@ -1561,11 +1561,11 @@ snapshots:
 
   '@sveltejs/load-config@0.2.3': {}
 
-  '@sveltejs/mcp@0.1.24(supports-color@7.2.0)(typescript@6.0.3)':
+  '@sveltejs/mcp@0.1.26(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
       eslint: 9.39.4(supports-color@7.2.0)
       sade: 1.8.1
-      tmcp: 1.19.3(typescript@6.0.3)
+      tmcp: 1.20.0-next.1(typescript@6.0.3)
     transitivePeerDependencies:
       - jiti
       - supports-color
@@ -2275,7 +2275,7 @@ snapshots:
     dependencies:
       tldts-core: 7.0.27
 
-  tmcp@1.19.3(typescript@6.0.3):
+  tmcp@1.20.0-next.1(typescript@6.0.3):
     dependencies:
       '@standard-schema/spec': 1.1.0
       json-rpc-2.0: 1.7.1
