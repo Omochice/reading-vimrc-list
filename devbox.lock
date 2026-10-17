@@ -101,41 +101,41 @@
       "last_modified": "2026-03-08T08:02:12Z",
       "resolved": "github:NixOS/nixpkgs/608d0cadfed240589a7eea422407a547ad626a14?lastModified=1772956932&narHash=sha256-M0yS4AafhKxPPmOHGqIV0iKxgNO8bHDWdl1kOwGBwRY%3D"
     },
-    "zizmor@1.30.1": {
-      "last_modified": "2026-10-08T19:21:32Z",
-      "resolved": "github:NixOS/nixpkgs/8edc0c72e3a38faf5434e40d1f19431125fe4b30#zizmor",
+    "zizmor@1.31.0": {
+      "last_modified": "2026-10-16T02:15:57Z",
+      "resolved": "github:NixOS/nixpkgs/f20cd90e28fe0403873f473b29e42662cd86e8c4#zizmor",
       "source": "devbox-search",
-      "version": "1.30.1",
+      "version": "1.31.0",
       "systems": {
         "aarch64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/ivq64d3j7af04z1ld4wi3dv4fpq6pms7-zizmor-1.30.1",
+              "path": "/nix/store/pyxri1z4jy52zd9q5afj3m10pfakhfan-zizmor-1.31.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/ivq64d3j7af04z1ld4wi3dv4fpq6pms7-zizmor-1.30.1"
+          "store_path": "/nix/store/pyxri1z4jy52zd9q5afj3m10pfakhfan-zizmor-1.31.0"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/hlvdln8cx917zx6rw4454a1zc26igcyl-zizmor-1.30.1",
+              "path": "/nix/store/f90x9nfpl7cw4gimv0zyas00vi4ij24n-zizmor-1.31.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/hlvdln8cx917zx6rw4454a1zc26igcyl-zizmor-1.30.1"
+          "store_path": "/nix/store/f90x9nfpl7cw4gimv0zyas00vi4ij24n-zizmor-1.31.0"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/fwca988idiziil105pa3q9zvpg31cshk-zizmor-1.30.1",
+              "path": "/nix/store/alvxpamnx5bg4xrvaps5wdys4lnx2hl8-zizmor-1.31.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/fwca988idiziil105pa3q9zvpg31cshk-zizmor-1.30.1"
+          "store_path": "/nix/store/alvxpamnx5bg4xrvaps5wdys4lnx2hl8-zizmor-1.31.0"
         }
       }
     }
